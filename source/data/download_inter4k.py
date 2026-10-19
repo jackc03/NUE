@@ -24,11 +24,12 @@ def request(start, end=''):
     headers = {'User-Agent': 'Mozilla/5.0', 'Range': f'bytes={start}-{end}'}
     response = urllib.request.urlopen(urllib.request.Request(URL, headers=headers), timeout=60)
     if response.headers.get_content_type() == 'text/html':
-        response.close()
-        raise RuntimeError('Google Drive returned a web page instead of the archive, likely '
-                           'its download quota. Retry later, or download '
-                           f'https://drive.google.com/file/d/{FILE_ID}/view in a browser '
-                           'and pass the file with --zip')
+        with response:
+            title = re.search(r'<title>(.*?)</title>', response.read().decode('utf-8', 'replace'), re.S)
+        raise RuntimeError(f'Google Drive returned "{title.group(1).strip() if title else "a web page"}" '
+                           'instead of the archive. Its download quota usually resets within 24 hours, '
+                           'so rerun later, or copy an Inter4K.zip from another machine and pass it '
+                           'with --zip')
     return response
 
 

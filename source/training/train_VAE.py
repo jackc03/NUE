@@ -3,20 +3,19 @@
 Example: python pretrain.py --train-dir data/train --val-dir data/val --out-dir runs/mbconv
 """
 
-import sys
-sys.path.insert(0, "/home/hice1/yyu496/AI_Enigneer")
-
-
 import argparse
 import math
 import random
+import sys
 from pathlib import Path
 
 import numpy as np
 from PIL import Image, ImageOps
 import torch
 from torch.utils.data import DataLoader, Dataset
-from NUE.source.models.mbconv_vae import MBConvVAE, vae_loss
+
+sys.path.insert(0, str(Path(__file__).resolve().parents[2]))  # Repo root, wherever it is cloned
+from source.models.mbconv_vae import MBConvVAE, vae_loss
 
 EXTENSIONS = {'.png', '.jpg', '.jpeg', '.webp', '.bmp'}
 
