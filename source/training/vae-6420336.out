@@ -1,0 +1,32 @@
+---------------------------------------
+Begin Slurm Prolog: Oct-20-2026 09:55:48
+Job ID:    6420336
+User ID:   jcochran66
+Account:   ece
+Job name:  vae
+Partition: coe-gpu
+QOS:       coe-ice
+---------------------------------------
+index, name, compute_mode, memory.used [MiB]
+0, NVIDIA H100 80GB HBM3, Default, 0 MiB
+1, NVIDIA H100 80GB HBM3, Default, 0 MiB
+2, NVIDIA H100 80GB HBM3, Default, 0 MiB
+3, NVIDIA H100 80GB HBM3, Default, 0 MiB
+W1020 09:56:53.224000 380476 /storage/ice1/4/8/jcochran66/envs/nue/lib/python3.11/site-packages/torch/distributed/run.py:792] 
+W1020 09:56:53.224000 380476 /storage/ice1/4/8/jcochran66/envs/nue/lib/python3.11/site-packages/torch/distributed/run.py:792] *****************************************
+W1020 09:56:53.224000 380476 /storage/ice1/4/8/jcochran66/envs/nue/lib/python3.11/site-packages/torch/distributed/run.py:792] Setting OMP_NUM_THREADS environment variable for each process to be 1 in default, to avoid your system being overloaded, please further tune the variable for optimal performance in your application as needed. 
+W1020 09:56:53.224000 380476 /storage/ice1/4/8/jcochran66/envs/nue/lib/python3.11/site-packages/torch/distributed/run.py:792] *****************************************
+train images=269877 val images=29989 gpus=4
+[2026-10-20T09:59:12.344] error: *** JOB 6420336 ON atl1-1-03-010-10-0 CANCELLED AT 2026-10-20T09:59:12 DUE to SIGNAL Terminated ***
+---------------------------------------
+Begin Slurm Epilog: Oct-20-2026 09:59:15
+Job ID:        6420336
+User ID:       jcochran66
+Account:       ece
+Job name:      vae
+Resources:     cpu=32,gres/gpu:h100=4,mem=128G,node=1
+Rsrc Used:     cput=01:48:48,vmem=0,walltime=00:03:24,mem=15577260K,energy_used=0
+Partition:     coe-gpu
+QOS:           coe-ice
+Nodes:         atl1-1-03-010-10-0
+---------------------------------------

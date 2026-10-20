@@ -50,7 +50,7 @@ class MBConv(nn.Module):
 
 
 class MBConvVAE(nn.Module):
-    def __init__(self, base_channels=32, blocks_per_stage=2, latent_channels=8, max_channels = 512):
+    def __init__(self, base_channels=32, blocks_per_stage=2, latent_channels=16, max_channels = 512):
         super().__init__()
 
         if min(base_channels, max_channels, blocks_per_stage, latent_channels) < 1:
