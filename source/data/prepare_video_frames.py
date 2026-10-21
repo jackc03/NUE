@@ -1,6 +1,7 @@
 """Split video clips, then extract frames for VAE training.
 
-Requires FFmpeg in PATH. Split is by source clip, never by frame.
+Requires FFmpeg in PATH, or the imageio-ffmpeg package (pip install imageio-ffmpeg),
+which bundles a binary. Split is by source clip, never by frame.
 """
 import argparse
 import random
@@ -9,6 +10,17 @@ import subprocess
 from pathlib import Path
 
 VIDEO_EXTENSIONS = {'.mp4', '.mov', '.mkv', '.avi', '.webm'}
+
+
+def find_ffmpeg():
+    found = shutil.which('ffmpeg')
+    if found:
+        return found
+    try:
+        import imageio_ffmpeg
+        return imageio_ffmpeg.get_ffmpeg_exe()
+    except (ImportError, RuntimeError):
+        return None
 
 
 def main():
@@ -21,8 +33,9 @@ def main():
     args = parser.parse_args()
     if args.fps <= 0 or not 0 < args.val_fraction < 1:
         parser.error('fps > 0 and 0 < val-fraction < 1 required')
-    if shutil.which('ffmpeg') is None:
-        parser.error('FFmpeg is not available in PATH')
+    ffmpeg = find_ffmpeg()
+    if ffmpeg is None:
+        parser.error('FFmpeg is not available in PATH; install it or run: pip install imageio-ffmpeg')
     videos = sorted(p for p in Path(args.videos).rglob('*')
                     if p.suffix.lower() in VIDEO_EXTENSIONS)
     if len(videos) < 2:
@@ -37,7 +50,7 @@ def main():
         if destination.exists() and any(destination.iterdir()):
             raise FileExistsError(f'{destination} already has files; use a fresh output directory')
         destination.mkdir(parents=True, exist_ok=True)
-        command = ['ffmpeg', '-hide_banner', '-loglevel', 'error', '-i', str(video),
+        command = [ffmpeg, '-hide_banner', '-loglevel', 'error', '-i', str(video),
                    '-vf', f'fps={args.fps:g}', '-q:v', '2',
                    str(destination / 'frame_%05d.jpg')]
         subprocess.run(command, check=True)
