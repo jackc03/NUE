@@ -5,6 +5,9 @@
 		},
 		{
 			"path": "../../scratch/runs/mbconv_vae"
+		},
+		{
+			"path": "../../scratch/runs/latent_unet"
 		}
 	],
 	"settings": {}

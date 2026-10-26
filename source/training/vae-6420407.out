@@ -1,0 +1,98 @@
+---------------------------------------
+Begin Slurm Prolog: Oct-20-2026 10:00:23
+Job ID:    6420407
+User ID:   jcochran66
+Account:   ece
+Job name:  vae
+Partition: coe-gpu
+QOS:       coe-ice
+---------------------------------------
+index, name, compute_mode, memory.used [MiB]
+0, NVIDIA H100 80GB HBM3, Default, 0 MiB
+1, NVIDIA H100 80GB HBM3, Default, 0 MiB
+2, NVIDIA H100 80GB HBM3, Default, 0 MiB
+3, NVIDIA H100 80GB HBM3, Default, 0 MiB
+W1020 10:00:29.450000 382355 /storage/ice1/4/8/jcochran66/envs/nue/lib/python3.11/site-packages/torch/distributed/run.py:792] 
+W1020 10:00:29.450000 382355 /storage/ice1/4/8/jcochran66/envs/nue/lib/python3.11/site-packages/torch/distributed/run.py:792] *****************************************
+W1020 10:00:29.450000 382355 /storage/ice1/4/8/jcochran66/envs/nue/lib/python3.11/site-packages/torch/distributed/run.py:792] Setting OMP_NUM_THREADS environment variable for each process to be 1 in default, to avoid your system being overloaded, please further tune the variable for optimal performance in your application as needed. 
+W1020 10:00:29.450000 382355 /storage/ice1/4/8/jcochran66/envs/nue/lib/python3.11/site-packages/torch/distributed/run.py:792] *****************************************
+train images=269877 val images=29989 gpus=4
+epoch 1 16000/269877 images step=1000 0.217s/step
+epoch 1 32000/269877 images step=2000 0.215s/step
+epoch 1 48000/269877 images step=3000 0.216s/step
+epoch 1 64000/269877 images step=4000 0.215s/step
+epoch 1 80000/269877 images step=5000 0.215s/step
+epoch 1 96000/269877 images step=6000 0.222s/step
+epoch 1 112000/269877 images step=7000 0.215s/step
+epoch 1 128000/269877 images step=8000 0.215s/step
+epoch 1 144000/269877 images step=9000 0.218s/step
+epoch 1 160000/269877 images step=10000 0.215s/step
+epoch 1 176000/269877 images step=11000 0.215s/step
+epoch 1 192000/269877 images step=12000 0.217s/step
+epoch 1 208000/269877 images step=13000 0.215s/step
+epoch 1 224000/269877 images step=14000 0.218s/step
+epoch 1 240000/269877 images step=15000 0.215s/step
+epoch 1 256000/269877 images step=16000 0.215s/step
+epoch 1/50 train loss=0.04532 l1=0.04496 kl=5.26430 val loss=0.02159 l1=0.02109 kl=4.91443 PSNR=34.82dB
+epoch 2 2128/269877 images step=17000 0.223s/step
+epoch 2 18128/269877 images step=18000 0.216s/step
+epoch 2 34128/269877 images step=19000 0.216s/step
+epoch 2 50128/269877 images step=20000 0.215s/step
+epoch 2 66128/269877 images step=21000 0.215s/step
+epoch 2 82128/269877 images step=22000 0.224s/step
+epoch 2 98128/269877 images step=23000 0.215s/step
+epoch 2 114128/269877 images step=24000 0.220s/step
+epoch 2 130128/269877 images step=25000 0.217s/step
+epoch 2 146128/269877 images step=26000 0.215s/step
+epoch 2 162128/269877 images step=27000 0.220s/step
+epoch 2 178128/269877 images step=28000 0.218s/step
+epoch 2 194128/269877 images step=29000 0.216s/step
+epoch 2 210128/269877 images step=30000 0.219s/step
+epoch 2 226128/269877 images step=31000 0.215s/step
+epoch 2 242128/269877 images step=32000 0.216s/step
+epoch 2 258128/269877 images step=33000 0.220s/step
+epoch 2/50 train loss=0.01785 l1=0.01736 kl=4.90064 val loss=0.02054 l1=0.02003 kl=5.10438 PSNR=35.76dB
+epoch 3 4256/269877 images step=34000 0.220s/step
+epoch 3 20256/269877 images step=35000 0.216s/step
+epoch 3 36256/269877 images step=36000 0.216s/step
+epoch 3 52256/269877 images step=37000 0.220s/step
+epoch 3 68256/269877 images step=38000 0.215s/step
+epoch 3 84256/269877 images step=39000 0.217s/step
+epoch 3 100256/269877 images step=40000 0.216s/step
+epoch 3 116256/269877 images step=41000 0.215s/step
+epoch 3 132256/269877 images step=42000 0.215s/step
+epoch 3 148256/269877 images step=43000 0.218s/step
+epoch 3 164256/269877 images step=44000 0.217s/step
+epoch 3 180256/269877 images step=45000 0.215s/step
+epoch 3 196256/269877 images step=46000 0.216s/step
+epoch 3 212256/269877 images step=47000 0.217s/step
+epoch 3 228256/269877 images step=48000 0.220s/step
+epoch 3 244256/269877 images step=49000 0.216s/step
+epoch 3 260256/269877 images step=50000 0.217s/step
+epoch 3/50 train loss=0.01498 l1=0.01451 kl=4.76906 val loss=0.01650 l1=0.01602 kl=4.81040 PSNR=37.25dB
+epoch 4 6384/269877 images step=51000 0.218s/step
+epoch 4 22384/269877 images step=52000 0.215s/step
+epoch 4 38384/269877 images step=53000 0.216s/step
+epoch 4 54384/269877 images step=54000 0.216s/step
+epoch 4 70384/269877 images step=55000 0.215s/step
+epoch 4 86384/269877 images step=56000 0.216s/step
+epoch 4 102384/269877 images step=57000 0.221s/step
+epoch 4 118384/269877 images step=58000 0.215s/step
+epoch 4 134384/269877 images step=59000 0.222s/step
+epoch 4 150384/269877 images step=60000 0.217s/step
+epoch 4 166384/269877 images step=61000 0.216s/step
+epoch 4 182384/269877 images step=62000 0.218s/step
+epoch 4 198384/269877 images step=63000 0.215s/step
+[2026-10-20T14:00:43.559] error: *** JOB 6420407 ON atl1-1-03-010-10-0 CANCELLED AT 2026-10-20T14:00:43 DUE TO TIME LIMIT ***
+---------------------------------------
+Begin Slurm Epilog: Oct-20-2026 14:00:46
+Job ID:        6420407
+User ID:       jcochran66
+Account:       ece
+Job name:      vae
+Resources:     cpu=32,gres/gpu:h100=4,mem=128G,node=1
+Rsrc Used:     cput=5-08:10:08,vmem=0,walltime=04:00:19,mem=66445052K,energy_used=0
+Partition:     coe-gpu
+QOS:           coe-ice
+Nodes:         atl1-1-03-010-10-0
+---------------------------------------

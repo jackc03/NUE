@@ -7,10 +7,10 @@
 # coe-ice QOS caps a job at 960 GPU-minutes (GPUs x minutes <= 960)
 #SBATCH -t 4:00:00
 #SBATCH -o vae-%j.out
-# atl1-1-03-010-30-0 has an H100 that CUDA cannot open (Oct 19). PACE's submit filter
+# atl1-1-03-010-30-0 (Oct 19) and atl1-1-03-011-3-0 (Oct 26) have H100s that CUDA cannot open. PACE's submit filter
 # overwrites --exclude when no partition is given, so -p is required for it to stick.
 #SBATCH -p coe-gpu
-#SBATCH --exclude=atl1-1-03-010-30-0
+#SBATCH --exclude=atl1-1-03-010-30-0,atl1-1-03-011-3-0
 
 cd ~/Code/NUE
 # activate your PyTorch environment here

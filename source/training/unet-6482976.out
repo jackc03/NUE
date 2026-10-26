@@ -1,0 +1,22 @@
+---------------------------------------
+Begin Slurm Prolog: Oct-23-2026 01:02:02
+Job ID:    6482976
+User ID:   jcochran66
+Account:   ece
+Job name:  unet
+Partition: coe-gpu
+QOS:       coe-ice
+---------------------------------------
+/storage/ice1/4/8/jcochran66/runs/latent_unet/latest.pt has finished all 40 epochs; nothing to do
+---------------------------------------
+Begin Slurm Epilog: Oct-23-2026 01:03:50
+Job ID:        6482976
+User ID:       jcochran66
+Account:       ece
+Job name:      unet
+Resources:     cpu=32,gres/gpu:h100=4,mem=128G,node=1
+Rsrc Used:     cput=00:58:08,vmem=0,walltime=00:01:49,mem=417896K,energy_used=0
+Partition:     coe-gpu
+QOS:           coe-ice
+Nodes:         atl1-1-03-010-15-0
+---------------------------------------

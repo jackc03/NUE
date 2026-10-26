@@ -1,0 +1,60 @@
+---------------------------------------
+Begin Slurm Prolog: Oct-22-2026 15:31:30
+Job ID:    6478998
+User ID:   jcochran66
+Account:   ece
+Job name:  unet
+Partition: coe-gpu
+QOS:       coe-ice
+---------------------------------------
+index, name, compute_mode, memory.used [MiB]
+0, NVIDIA H100 80GB HBM3, Default, 0 MiB
+1, NVIDIA H100 80GB HBM3, Default, 0 MiB
+2, NVIDIA H100 80GB HBM3, Default, 0 MiB
+3, NVIDIA H100 80GB HBM3, Default, 0 MiB
+W1022 15:33:03.127000 3417899 /storage/ice1/4/8/jcochran66/envs/nue/lib/python3.11/site-packages/torch/distributed/run.py:792] 
+W1022 15:33:03.127000 3417899 /storage/ice1/4/8/jcochran66/envs/nue/lib/python3.11/site-packages/torch/distributed/run.py:792] *****************************************
+W1022 15:33:03.127000 3417899 /storage/ice1/4/8/jcochran66/envs/nue/lib/python3.11/site-packages/torch/distributed/run.py:792] Setting OMP_NUM_THREADS environment variable for each process to be 1 in default, to avoid your system being overloaded, please further tune the variable for optimal performance in your application as needed. 
+W1022 15:33:03.127000 3417899 /storage/ice1/4/8/jcochran66/envs/nue/lib/python3.11/site-packages/torch/distributed/run.py:792] *****************************************
+Resumed after 12 finished epochs, 26112 images into epoch 13, step=51000
+train images=269877 val images=2000 gpus=4 unet params=77.6M
+latent mean=[ 0.013 -0.007 -0.006  0.035  0.558 -0.123  0.07  -0.106 -0.024  0.116
+  0.009 -0.02   0.018 -0.049 -0.084  0.008]
+latent std=[0.765 0.853 0.797 0.767 3.393 0.718 1.017 0.748 0.742 0.69  1.224 0.855
+ 0.797 0.773 0.662 0.814]
+epoch 13 90112/269877 images step=52000 loss=0.31854 (rank 0) lr=1.00e-04 0.298s/step
+epoch 13 154112/269877 images step=53000 loss=0.32057 (rank 0) lr=1.00e-04 0.271s/step
+epoch 13 218112/269877 images step=54000 loss=0.32079 (rank 0) lr=1.00e-04 0.277s/step
+epoch 13/25 train loss=0.32041 val loss (EMA)=0.42175 | 16 DDIM-50 samples PSNR=32.08dB (bicubic 31.74dB)
+epoch 14 12288/269877 images step=55000 loss=0.31859 (rank 0) lr=1.00e-04 0.285s/step
+epoch 14 76288/269877 images step=56000 loss=0.31915 (rank 0) lr=1.00e-04 0.270s/step
+epoch 14 140288/269877 images step=57000 loss=0.31848 (rank 0) lr=1.00e-04 0.271s/step
+epoch 14 204288/269877 images step=58000 loss=0.31822 (rank 0) lr=1.00e-04 0.277s/step
+epoch 14 268288/269877 images step=59000 loss=0.32196 (rank 0) lr=1.00e-04 0.272s/step
+epoch 14/25 train loss=0.31969 val loss (EMA)=0.42069 | 16 DDIM-50 samples PSNR=32.11dB (bicubic 31.74dB)
+epoch 15 62464/269877 images step=60000 loss=0.32042 (rank 0) lr=1.00e-04 0.273s/step
+epoch 15 126464/269877 images step=61000 loss=0.31522 (rank 0) lr=1.00e-04 0.270s/step
+epoch 15 190464/269877 images step=62000 loss=0.31676 (rank 0) lr=1.00e-04 0.276s/step
+epoch 15 254464/269877 images step=63000 loss=0.31842 (rank 0) lr=1.00e-04 0.270s/step
+epoch 15/25 train loss=0.31860 val loss (EMA)=0.41977 | 16 DDIM-50 samples PSNR=32.19dB (bicubic 31.74dB)
+epoch 16 48640/269877 images step=64000 loss=0.31455 (rank 0) lr=1.00e-04 0.273s/step
+epoch 16 112640/269877 images step=65000 loss=0.31602 (rank 0) lr=1.00e-04 0.273s/step
+epoch 16 176640/269877 images step=66000 loss=0.32068 (rank 0) lr=1.00e-04 0.273s/step
+epoch 16 240640/269877 images step=67000 loss=0.31766 (rank 0) lr=1.00e-04 0.275s/step
+epoch 16/25 train loss=0.31711 val loss (EMA)=0.41894 | 16 DDIM-50 samples PSNR=30.83dB (bicubic 31.74dB)
+epoch 17 34816/269877 images step=68000 loss=0.31486 (rank 0) lr=1.00e-04 0.275s/step
+epoch 17 98816/269877 images step=69000 loss=0.31626 (rank 0) lr=1.00e-04 0.273s/step
+epoch 17 162816/269877 images step=70000 loss=0.31750 (rank 0) lr=1.00e-04 0.274s/step
+[2026-10-22T17:05:13.855] error: *** JOB 6478998 ON atl1-1-03-011-13-0 CANCELLED AT 2026-10-22T17:05:13 DUE to SIGNAL Terminated ***
+---------------------------------------
+Begin Slurm Epilog: Oct-22-2026 17:05:16
+Job ID:        6478998
+User ID:       jcochran66
+Account:       ece
+Job name:      unet
+Resources:     cpu=32,gres/gpu:h100=4,mem=128G,node=1
+Rsrc Used:     cput=2-01:58:56,vmem=0,walltime=01:33:43,mem=134174560K,energy_used=0
+Partition:     coe-gpu
+QOS:           coe-ice
+Nodes:         atl1-1-03-011-13-0
+---------------------------------------

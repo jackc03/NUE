@@ -114,6 +114,16 @@ def all_reduce_sums(sums, device):
     return dict(zip(sums, totals.tolist()))
 
 
+def learning_rate(progress, args):
+    # Constant lr, then a cosine decay to min_lr over the last lr_decay_epochs. `progress`
+    # counts epochs trained (fractional), so resumes and GPU-count changes keep the curve.
+    start = args.epochs - args.lr_decay_epochs
+    if progress <= start:
+        return args.lr
+    t = min((progress - start) / args.lr_decay_epochs, 1.)
+    return args.min_lr + (args.lr - args.min_lr) * .5 * (1 + math.cos(math.pi * t))
+
+
 
 
 def main():
@@ -122,11 +132,14 @@ def main():
     parser.add_argument('--val-dir', required=True)
     parser.add_argument('--out-dir', default='runs/mbconv_vae')
     parser.add_argument('--resume', default=None, help='A checkpoint from this script')
-    parser.add_argument('--epochs', type=int, default=50)
+    parser.add_argument('--epochs', type=int, default=25)
     parser.add_argument('--batch-size', type=int, default=4, help='Per GPU')
     parser.add_argument('--crop', type=int, default=256)
     parser.add_argument('--workers', type=int, default=0)
     parser.add_argument('--lr', type=float, default=2e-4)
+    parser.add_argument('--lr-decay-epochs', type=int, default=5,
+                        help='Cosine-decay lr to --min-lr over this many final epochs (0 = constant)')
+    parser.add_argument('--min-lr', type=float, default=2e-6)
     parser.add_argument('--beta', type=float, default=1e-4)
     parser.add_argument('--kl-warmup-steps', type=int, default=10000)
     parser.add_argument('--base-channels', type=int, default=32)
@@ -155,6 +168,8 @@ def main():
         parser.error('checkpoint-every >= 0 required')
     if args.beta < 0 or args.lr <= 0 or args.kl_warmup_steps < 0:
         parser.error('beta >= 0, lr > 0, kl-warmup-steps >= 0 required')
+    if not (0 <= args.lr_decay_epochs <= args.epochs and 0 <= args.min_lr <= args.lr):
+        parser.error('0 <= lr-decay-epochs <= epochs and 0 <= min-lr <= lr required')
     if args.amp and not args.device.startswith('cuda'):
         parser.error('--amp is supported only with CUDA')
     # Per-rank seeds vary the crops; DDP copies rank 0's initial weights to every rank.
@@ -210,6 +225,9 @@ def main():
         for x in train_loader:
             x = x.to(device, non_blocking=True)
             beta = args.beta * min(1., (step + 1) / max(args.kl_warmup_steps, 1))
+            lr = learning_rate(epoch + epoch_samples / len(train_set), args)
+            for group in optimizer.param_groups:
+                group['lr'] = lr  # Overrides the lr restored with the optimizer state
             optimizer.zero_grad(set_to_none=True)
             with torch.autocast(device_type='cuda', enabled=args.amp, dtype=torch.bfloat16):
                 reconstruction, mu, logvar = train_model(x)
@@ -230,7 +248,7 @@ def main():
                                     step, best_psnr, config, args)
                 now = time.time()
                 log(f'epoch {epoch+1} {epoch_samples}/{len(train_set)} images step={step} '
-                    f'{(now - last_time) / (step - last_step):.3f}s/step', flush=True)
+                    f'lr={lr:.2e} {(now - last_time) / (step - last_step):.3f}s/step', flush=True)
                 last_time, last_step = now, step
         epoch_samples = 0
         model.eval()

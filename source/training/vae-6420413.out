@@ -1,0 +1,88 @@
+---------------------------------------
+Begin Slurm Prolog: Oct-21-2026 09:42:58
+Job ID:    6420413
+User ID:   jcochran66
+Account:   ece
+Job name:  vae
+Partition: coe-gpu
+QOS:       coe-ice
+---------------------------------------
+index, name, compute_mode, memory.used [MiB]
+0, NVIDIA H100 80GB HBM3, Default, 0 MiB
+1, NVIDIA H100 80GB HBM3, Default, 0 MiB
+2, NVIDIA H100 80GB HBM3, Default, 0 MiB
+3, NVIDIA H100 80GB HBM3, Default, 0 MiB
+W1021 09:44:23.479000 2664576 /storage/ice1/4/8/jcochran66/envs/nue/lib/python3.11/site-packages/torch/distributed/run.py:792] 
+W1021 09:44:23.479000 2664576 /storage/ice1/4/8/jcochran66/envs/nue/lib/python3.11/site-packages/torch/distributed/run.py:792] *****************************************
+W1021 09:44:23.479000 2664576 /storage/ice1/4/8/jcochran66/envs/nue/lib/python3.11/site-packages/torch/distributed/run.py:792] Setting OMP_NUM_THREADS environment variable for each process to be 1 in default, to avoid your system being overloaded, please further tune the variable for optimal performance in your application as needed. 
+W1021 09:44:23.479000 2664576 /storage/ice1/4/8/jcochran66/envs/nue/lib/python3.11/site-packages/torch/distributed/run.py:792] *****************************************
+train images=269877 val images=29989 gpus=4
+Resumed after 21 finished epochs, 236688 images into epoch 22, step=369000
+epoch 22 252688/269877 images step=370000 lr=1.35e-04 0.234s/step
+epoch 22 268688/269877 images step=371000 lr=1.32e-04 0.215s/step
+epoch 22/25 train loss=0.00824 l1=0.00782 kl=4.18361 val loss=0.01114 l1=0.01070 kl=4.39010 PSNR=40.51dB
+epoch 23 14816/269877 images step=372000 lr=1.28e-04 0.216s/step
+epoch 23 30816/269877 images step=373000 lr=1.25e-04 0.215s/step
+epoch 23 46816/269877 images step=374000 lr=1.21e-04 0.221s/step
+epoch 23 62816/269877 images step=375000 lr=1.18e-04 0.216s/step
+epoch 23 78816/269877 images step=376000 lr=1.14e-04 0.220s/step
+epoch 23 94816/269877 images step=377000 lr=1.10e-04 0.216s/step
+epoch 23 110816/269877 images step=378000 lr=1.07e-04 0.215s/step
+epoch 23 126816/269877 images step=379000 lr=1.03e-04 0.216s/step
+epoch 23 142816/269877 images step=380000 lr=9.92e-05 0.218s/step
+epoch 23 158816/269877 images step=381000 lr=9.55e-05 0.216s/step
+epoch 23 174816/269877 images step=382000 lr=9.18e-05 0.215s/step
+epoch 23 190816/269877 images step=383000 lr=8.82e-05 0.216s/step
+epoch 23 206816/269877 images step=384000 lr=8.45e-05 0.215s/step
+epoch 23 222816/269877 images step=385000 lr=8.09e-05 0.220s/step
+epoch 23 238816/269877 images step=386000 lr=7.73e-05 0.216s/step
+epoch 23 254816/269877 images step=387000 lr=7.37e-05 0.220s/step
+epoch 23/25 train loss=0.00767 l1=0.00726 kl=4.12224 val loss=0.00987 l1=0.00943 kl=4.34280 PSNR=41.07dB
+epoch 24 944/269877 images step=388000 lr=7.02e-05 0.235s/step
+epoch 24 16944/269877 images step=389000 lr=6.67e-05 0.215s/step
+epoch 24 32944/269877 images step=390000 lr=6.33e-05 0.216s/step
+epoch 24 48944/269877 images step=391000 lr=5.99e-05 0.219s/step
+epoch 24 64944/269877 images step=392000 lr=5.66e-05 0.216s/step
+epoch 24 80944/269877 images step=393000 lr=5.33e-05 0.217s/step
+epoch 24 96944/269877 images step=394000 lr=5.01e-05 0.215s/step
+epoch 24 112944/269877 images step=395000 lr=4.70e-05 0.215s/step
+epoch 24 128944/269877 images step=396000 lr=4.39e-05 0.219s/step
+epoch 24 144944/269877 images step=397000 lr=4.10e-05 0.221s/step
+epoch 24 160944/269877 images step=398000 lr=3.81e-05 0.216s/step
+epoch 24 176944/269877 images step=399000 lr=3.53e-05 0.216s/step
+epoch 24 192944/269877 images step=400000 lr=3.26e-05 0.217s/step
+epoch 24 208944/269877 images step=401000 lr=2.99e-05 0.216s/step
+epoch 24 224944/269877 images step=402000 lr=2.74e-05 0.219s/step
+epoch 24 240944/269877 images step=403000 lr=2.50e-05 0.217s/step
+epoch 24 256944/269877 images step=404000 lr=2.27e-05 0.219s/step
+epoch 24/25 train loss=0.00694 l1=0.00653 kl=4.09060 val loss=0.00926 l1=0.00883 kl=4.30960 PSNR=41.29dB
+epoch 25 3072/269877 images step=405000 lr=2.05e-05 0.220s/step
+epoch 25 19072/269877 images step=406000 lr=1.84e-05 0.215s/step
+epoch 25 35072/269877 images step=407000 lr=1.64e-05 0.215s/step
+epoch 25 51072/269877 images step=408000 lr=1.46e-05 0.218s/step
+epoch 25 67072/269877 images step=409000 lr=1.28e-05 0.217s/step
+epoch 25 83072/269877 images step=410000 lr=1.12e-05 0.217s/step
+epoch 25 99072/269877 images step=411000 lr=9.73e-06 0.219s/step
+epoch 25 115072/269877 images step=412000 lr=8.36e-06 0.216s/step
+epoch 25 131072/269877 images step=413000 lr=7.13e-06 0.218s/step
+epoch 25 147072/269877 images step=414000 lr=6.02e-06 0.219s/step
+epoch 25 163072/269877 images step=415000 lr=5.05e-06 0.216s/step
+epoch 25 179072/269877 images step=416000 lr=4.20e-06 0.215s/step
+epoch 25 195072/269877 images step=417000 lr=3.50e-06 0.217s/step
+epoch 25 211072/269877 images step=418000 lr=2.93e-06 0.216s/step
+epoch 25 227072/269877 images step=419000 lr=2.49e-06 0.217s/step
+epoch 25 243072/269877 images step=420000 lr=2.19e-06 0.219s/step
+epoch 25 259072/269877 images step=421000 lr=2.03e-06 0.216s/step
+epoch 25/25 train loss=0.00661 l1=0.00620 kl=4.08149 val loss=0.00910 l1=0.00867 kl=4.30725 PSNR=41.36dB
+---------------------------------------
+Begin Slurm Epilog: Oct-21-2026 13:09:20
+Job ID:        6420413
+User ID:       jcochran66
+Account:       ece
+Job name:      vae
+Resources:     cpu=32,gres/gpu:h100=4,mem=128G,node=1
+Rsrc Used:     cput=4-14:03:44,vmem=0,walltime=03:26:22,mem=67110368K,energy_used=0
+Partition:     coe-gpu
+QOS:           coe-ice
+Nodes:         atl1-1-03-010-10-0
+---------------------------------------

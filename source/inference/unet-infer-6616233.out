@@ -1,0 +1,58 @@
+---------------------------------------
+Begin Slurm Prolog: Oct-26-2026 14:47:26
+Job ID:    6616233
+User ID:   jcochran66
+Account:   ece
+Job name:  unet-infer
+Partition: coe-gpu
+QOS:       coe-ice
+---------------------------------------
+index, name, compute_mode, memory.used [MiB]
+0, NVIDIA H100 80GB HBM3, Default, 0 MiB
+/storage/ice1/4/8/jcochran66/runs/latent_unet/best.pt: epoch=40 step=168640 val loss=0.40752 | 20 frames via 960x540, DDIM-50, tile 256/64 -> /storage/ice1/4/8/jcochran66/runs/latent_unet/inference_best
+[1/20] 00000_798/frame_00001.jpg sr_psnr=36.1022 sr_psnr_y=37.5473 sr_ssim=0.9572 sr_ssim_y=0.9643 sr_ms_ssim=0.9907 bicubic_psnr=34.7225 bicubic_psnr_y=36.1437 bicubic_ssim=0.9532 bicubic_ssim_y=0.9610 bicubic_ms_ssim=0.9882 seconds=29.5596
+[2/20] 00005_533/frame_00002.jpg sr_psnr=39.3170 sr_psnr_y=40.9105 sr_ssim=0.9588 sr_ssim_y=0.9677 sr_ms_ssim=0.9899 bicubic_psnr=39.0001 bicubic_psnr_y=40.4766 bicubic_ssim=0.9599 bicubic_ssim_y=0.9688 bicubic_ms_ssim=0.9886 seconds=10.7208
+[3/20] 00010_264/frame_00001.jpg sr_psnr=27.7549 sr_psnr_y=29.0889 sr_ssim=0.8595 sr_ssim_y=0.8714 sr_ms_ssim=0.9652 bicubic_psnr=27.0064 bicubic_psnr_y=28.3332 bicubic_ssim=0.8389 bicubic_ssim_y=0.8527 bicubic_ms_ssim=0.9546 seconds=10.7079
+[4/20] 00015_55/frame_00001.jpg sr_psnr=41.3587 sr_psnr_y=43.0358 sr_ssim=0.9884 sr_ssim_y=0.9918 sr_ms_ssim=0.9972 bicubic_psnr=41.3489 bicubic_psnr_y=42.8317 bicubic_ssim=0.9865 bicubic_ssim_y=0.9899 bicubic_ms_ssim=0.9964 seconds=10.7002
+[5/20] 00019_400/frame_00300.jpg sr_psnr=24.5024 sr_psnr_y=25.7935 sr_ssim=0.8711 sr_ssim_y=0.8807 sr_ms_ssim=0.9670 bicubic_psnr=24.5958 bicubic_psnr_y=25.8966 bicubic_ssim=0.8501 bicubic_ssim_y=0.8616 bicubic_ms_ssim=0.9556 seconds=10.7018
+[6/20] 00025_527/frame_00001.jpg sr_psnr=29.9456 sr_psnr_y=31.2770 sr_ssim=0.9095 sr_ssim_y=0.9183 sr_ms_ssim=0.9788 bicubic_psnr=29.1704 bicubic_psnr_y=30.4984 bicubic_ssim=0.8893 bicubic_ssim_y=0.8998 bicubic_ms_ssim=0.9697 seconds=10.7223
+[7/20] 00029_792/frame_00299.jpg sr_psnr=41.4452 sr_psnr_y=43.7470 sr_ssim=0.9875 sr_ssim_y=0.9923 sr_ms_ssim=0.9963 bicubic_psnr=40.4512 bicubic_psnr_y=42.0179 bicubic_ssim=0.9890 bicubic_ssim_y=0.9926 bicubic_ms_ssim=0.9967 seconds=10.7295
+[8/20] 00034_930/frame_00298.jpg sr_psnr=50.8236 sr_psnr_y=54.5477 sr_ssim=0.9945 sr_ssim_y=0.9980 sr_ms_ssim=0.9987 bicubic_psnr=49.7134 bicubic_psnr_y=52.8853 bicubic_ssim=0.9939 bicubic_ssim_y=0.9975 bicubic_ms_ssim=0.9985 seconds=10.6768
+[9/20] 00039_482/frame_00297.jpg sr_psnr=26.7835 sr_psnr_y=28.1051 sr_ssim=0.8414 sr_ssim_y=0.8524 sr_ms_ssim=0.9640 bicubic_psnr=26.9833 bicubic_psnr_y=28.3122 bicubic_ssim=0.8310 bicubic_ssim_y=0.8439 bicubic_ms_ssim=0.9566 seconds=10.6548
+[10/20] 00044_518/frame_00298.jpg sr_psnr=48.1985 sr_psnr_y=50.1402 sr_ssim=0.9957 sr_ssim_y=0.9982 sr_ms_ssim=0.9993 bicubic_psnr=44.1909 bicubic_psnr_y=45.7638 bicubic_ssim=0.9936 bicubic_ssim_y=0.9962 bicubic_ms_ssim=0.9986 seconds=10.6354
+[11/20] 00049_20/frame_00298.jpg sr_psnr=29.6431 sr_psnr_y=30.9668 sr_ssim=0.9272 sr_ssim_y=0.9343 sr_ms_ssim=0.9838 bicubic_psnr=28.4319 bicubic_psnr_y=29.7477 bicubic_ssim=0.8936 bicubic_ssim_y=0.9042 bicubic_ms_ssim=0.9718 seconds=10.6149
+[12/20] 00054_471/frame_00298.jpg sr_psnr=40.9199 sr_psnr_y=42.4743 sr_ssim=0.9797 sr_ssim_y=0.9863 sr_ms_ssim=0.9953 bicubic_psnr=39.9125 bicubic_psnr_y=41.4072 bicubic_ssim=0.9768 bicubic_ssim_y=0.9841 bicubic_ms_ssim=0.9939 seconds=10.6202
+[13/20] 00059_626/frame_00299.jpg sr_psnr=40.3162 sr_psnr_y=42.2986 sr_ssim=0.9810 sr_ssim_y=0.9862 sr_ms_ssim=0.9938 bicubic_psnr=42.7041 bicubic_psnr_y=44.2980 bicubic_ssim=0.9856 bicubic_ssim_y=0.9901 bicubic_ms_ssim=0.9955 seconds=10.6219
+[14/20] 00064_426/frame_00299.jpg sr_psnr=41.4077 sr_psnr_y=42.9368 sr_ssim=0.9821 sr_ssim_y=0.9864 sr_ms_ssim=0.9954 bicubic_psnr=41.2290 bicubic_psnr_y=42.7127 bicubic_ssim=0.9828 bicubic_ssim_y=0.9869 bicubic_ms_ssim=0.9950 seconds=10.6332
+[15/20] 00069_10/frame_00299.jpg sr_psnr=50.8804 sr_psnr_y=53.5121 sr_ssim=0.9964 sr_ssim_y=0.9979 sr_ms_ssim=0.9988 bicubic_psnr=51.0842 bicubic_psnr_y=53.6398 bicubic_ssim=0.9973 bicubic_ssim_y=0.9986 bicubic_ms_ssim=0.9991 seconds=10.6224
+[16/20] 00074_554/frame_00299.jpg sr_psnr=36.4848 sr_psnr_y=37.9083 sr_ssim=0.9616 sr_ssim_y=0.9683 sr_ms_ssim=0.9923 bicubic_psnr=34.0432 bicubic_psnr_y=35.4077 bicubic_ssim=0.9456 bicubic_ssim_y=0.9539 bicubic_ms_ssim=0.9868 seconds=10.6301
+[17/20] 00079_919/frame_00299.jpg sr_psnr=31.5482 sr_psnr_y=32.9242 sr_ssim=0.8810 sr_ssim_y=0.8967 sr_ms_ssim=0.9698 bicubic_psnr=32.2509 bicubic_psnr_y=33.6027 bicubic_ssim=0.8951 bicubic_ssim_y=0.9103 bicubic_ms_ssim=0.9700 seconds=10.6235
+[18/20] 00084_279/frame_00298.jpg sr_psnr=41.0198 sr_psnr_y=42.5769 sr_ssim=0.9857 sr_ssim_y=0.9905 sr_ms_ssim=0.9969 bicubic_psnr=38.2348 bicubic_psnr_y=39.6346 bicubic_ssim=0.9823 bicubic_ssim_y=0.9877 bicubic_ms_ssim=0.9957 seconds=10.6409
+[19/20] 00089_12/frame_00300.jpg sr_psnr=26.2255 sr_psnr_y=27.5853 sr_ssim=0.8853 sr_ssim_y=0.9065 sr_ms_ssim=0.9746 bicubic_psnr=25.5153 bicubic_psnr_y=26.8462 bicubic_ssim=0.8645 bicubic_ssim_y=0.8876 bicubic_ms_ssim=0.9610 seconds=10.6565
+[20/20] 00094_129/frame_00300.jpg sr_psnr=33.7309 sr_psnr_y=35.0835 sr_ssim=0.9614 sr_ssim_y=0.9668 sr_ms_ssim=0.9911 bicubic_psnr=32.1947 bicubic_psnr_y=33.5348 bicubic_ssim=0.9508 bicubic_ssim_y=0.9570 bicubic_ms_ssim=0.9864 seconds=10.6418
+
+Mean over 20 full frames, peak GPU memory 10.0GB
+  sr_psnr          36.9204 ± 7.8186
+  sr_psnr_y        38.6230 ± 8.2725
+  sr_ssim          0.9452 ± 0.0503
+  sr_ssim_y        0.9527 ± 0.0467
+  sr_ms_ssim       0.9869 ± 0.0120
+  bicubic_psnr     36.1392 ± 7.6564
+  bicubic_psnr_y   37.6995 ± 7.9951
+  bicubic_ssim     0.9380 ± 0.0565
+  bicubic_ssim_y   0.9462 ± 0.0523
+  bicubic_ms_ssim  0.9829 ± 0.0158
+  seconds          11.6057 ± 4.1191
+Wrote /storage/ice1/4/8/jcochran66/runs/latent_unet/inference_best/metrics.csv and /storage/ice1/4/8/jcochran66/runs/latent_unet/inference_best/summary.json
+---------------------------------------
+Begin Slurm Epilog: Oct-26-2026 14:53:06
+Job ID:        6616233
+User ID:       jcochran66
+Account:       ece
+Job name:      unet-infer
+Resources:     cpu=8,gres/gpu:h100=1,mem=64G,node=1
+Rsrc Used:     cput=00:45:20,vmem=0,walltime=00:05:40,mem=3236444K,energy_used=0
+Partition:     coe-gpu
+QOS:           coe-ice
+Nodes:         atl1-1-03-013-13-0
+---------------------------------------

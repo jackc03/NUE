@@ -1,0 +1,236 @@
+---------------------------------------
+Begin Slurm Prolog: Oct-20-2026 12:26:44
+Job ID:    6422453
+User ID:   jcochran66
+Account:   ece
+Job name:  vae-infer
+Partition: coe-gpu
+QOS:       coe-ice
+---------------------------------------
+index, name, compute_mode, memory.used [MiB]
+0, NVIDIA H100 80GB HBM3, Default, 0 MiB
+/storage/ice1/4/8/jcochran66/runs/mbconv_vae/best.pt: epoch=2 step=33734 crop val PSNR=35.76dB | 200 frames -> /storage/ice1/4/8/jcochran66/runs/mbconv_vae/inference_best
+[1/200] 00000_798/frame_00001.jpg psnr=39.4020 psnr_y=41.3101 ssim=0.9813 ssim_y=0.9927 ms_ssim=0.9964 l1=0.0150 kl=4.4344 latent_std=0.8984 seconds=21.8598
+[2/200] 00000_798/frame_00150.jpg psnr=35.3637 psnr_y=37.4916 ssim=0.9838 ssim_y=0.9938 ms_ssim=0.9950 l1=0.0257 kl=4.8287 latent_std=0.8802 seconds=5.9731
+[3/200] 00001_555/frame_00001.jpg psnr=41.6953 psnr_y=44.7952 ssim=0.9891 ssim_y=0.9941 ms_ssim=0.9970 l1=0.0121 kl=5.1251 latent_std=0.8713 seconds=5.9682
+[4/200] 00001_555/frame_00151.jpg psnr=42.3009 psnr_y=45.7612 ssim=0.9900 ssim_y=0.9951 ms_ssim=0.9970 l1=0.0114 kl=5.0979 latent_std=0.8777 seconds=5.9682
+[5/200] 00002_904/frame_00001.jpg psnr=40.3728 psnr_y=42.5971 ssim=0.9814 ssim_y=0.9932 ms_ssim=0.9975 l1=0.0116 kl=4.7531 latent_std=0.9645 seconds=5.9682
+[6/200] 00002_904/frame_00151.jpg psnr=40.7051 psnr_y=42.7013 ssim=0.9877 ssim_y=0.9936 ms_ssim=0.9977 l1=0.0116 kl=5.0050 latent_std=0.9086 seconds=5.9680
+[7/200] 00003_929/frame_00001.jpg psnr=38.7396 psnr_y=41.0838 ssim=0.9765 ssim_y=0.9973 ms_ssim=0.9951 l1=0.0111 kl=3.9073 latent_std=1.2518 seconds=5.9679
+[8/200] 00003_929/frame_00151.jpg psnr=38.6897 psnr_y=42.1163 ssim=0.9808 ssim_y=0.9940 ms_ssim=0.9964 l1=0.0142 kl=4.3205 latent_std=0.9521 seconds=5.9683
+[9/200] 00004_128/frame_00002.jpg psnr=39.3203 psnr_y=41.1535 ssim=0.9890 ssim_y=0.9926 ms_ssim=0.9977 l1=0.0141 kl=5.2829 latent_std=0.8886 seconds=5.9676
+[10/200] 00004_128/frame_00152.jpg psnr=39.6791 psnr_y=41.8058 ssim=0.9890 ssim_y=0.9930 ms_ssim=0.9976 l1=0.0139 kl=5.2402 latent_std=0.8784 seconds=5.9680
+[11/200] 00005_533/frame_00002.jpg psnr=41.6502 psnr_y=45.2053 ssim=0.9849 ssim_y=0.9943 ms_ssim=0.9960 l1=0.0122 kl=5.1988 latent_std=0.9194 seconds=5.9708
+[12/200] 00005_533/frame_00152.jpg psnr=41.3515 psnr_y=44.7848 ssim=0.9856 ssim_y=0.9937 ms_ssim=0.9960 l1=0.0125 kl=5.2219 latent_std=0.9200 seconds=5.9693
+[13/200] 00006_175/frame_00002.jpg psnr=39.7232 psnr_y=41.9342 ssim=0.9892 ssim_y=0.9946 ms_ssim=0.9976 l1=0.0143 kl=4.9955 latent_std=0.8963 seconds=5.9707
+[14/200] 00006_175/frame_00152.jpg psnr=39.8160 psnr_y=42.2452 ssim=0.9901 ssim_y=0.9951 ms_ssim=0.9974 l1=0.0147 kl=4.8484 latent_std=0.8151 seconds=5.9723
+[15/200] 00007_774/frame_00002.jpg psnr=38.7683 psnr_y=42.0645 ssim=0.9833 ssim_y=0.9915 ms_ssim=0.9960 l1=0.0156 kl=4.7572 latent_std=0.7887 seconds=5.9711
+[16/200] 00007_774/frame_00152.jpg psnr=39.0679 psnr_y=42.2608 ssim=0.9839 ssim_y=0.9918 ms_ssim=0.9961 l1=0.0152 kl=4.7432 latent_std=0.7772 seconds=5.9719
+[17/200] 00008_417/frame_00002.jpg psnr=40.5181 psnr_y=41.9837 ssim=0.9895 ssim_y=0.9921 ms_ssim=0.9978 l1=0.0128 kl=4.6841 latent_std=0.6128 seconds=5.9713
+[18/200] 00008_417/frame_00152.jpg psnr=40.8899 psnr_y=42.3785 ssim=0.9888 ssim_y=0.9920 ms_ssim=0.9975 l1=0.0126 kl=4.6961 latent_std=0.7042 seconds=5.9673
+[19/200] 00009_57/frame_00002.jpg psnr=40.3560 psnr_y=42.5381 ssim=0.9902 ssim_y=0.9934 ms_ssim=0.9978 l1=0.0136 kl=4.5580 latent_std=0.7448 seconds=5.9684
+[20/200] 00009_57/frame_00151.jpg psnr=36.4751 psnr_y=38.1854 ssim=0.9835 ssim_y=0.9871 ms_ssim=0.9971 l1=0.0187 kl=4.9384 latent_std=0.8900 seconds=5.9694
+[21/200] 00010_264/frame_00001.jpg psnr=38.4242 psnr_y=40.1733 ssim=0.9875 ssim_y=0.9903 ms_ssim=0.9975 l1=0.0152 kl=5.7195 latent_std=1.0078 seconds=5.9684
+[22/200] 00010_264/frame_00151.jpg psnr=38.7960 psnr_y=40.4749 ssim=0.9882 ssim_y=0.9913 ms_ssim=0.9977 l1=0.0129 kl=5.9041 latent_std=1.1079 seconds=5.9683
+[23/200] 00011_827/frame_00001.jpg psnr=39.5871 psnr_y=41.8451 ssim=0.9872 ssim_y=0.9908 ms_ssim=0.9974 l1=0.0149 kl=4.8204 latent_std=0.7331 seconds=5.9711
+[24/200] 00011_827/frame_00151.jpg psnr=40.4178 psnr_y=42.8996 ssim=0.9889 ssim_y=0.9926 ms_ssim=0.9975 l1=0.0139 kl=4.7902 latent_std=0.7175 seconds=5.9682
+[25/200] 00012_475/frame_00001.jpg psnr=37.1038 psnr_y=39.0347 ssim=0.9864 ssim_y=0.9902 ms_ssim=0.9972 l1=0.0162 kl=5.7777 latent_std=1.0655 seconds=5.9688
+[26/200] 00012_475/frame_00151.jpg psnr=40.0288 psnr_y=42.2980 ssim=0.9893 ssim_y=0.9932 ms_ssim=0.9977 l1=0.0132 kl=5.5154 latent_std=1.0128 seconds=5.9675
+[27/200] 00013_652/frame_00001.jpg psnr=40.7967 psnr_y=43.9883 ssim=0.9872 ssim_y=0.9931 ms_ssim=0.9971 l1=0.0129 kl=4.6204 latent_std=0.7581 seconds=5.9680
+[28/200] 00013_652/frame_00151.jpg psnr=42.0705 psnr_y=45.4513 ssim=0.9898 ssim_y=0.9952 ms_ssim=0.9976 l1=0.0117 kl=4.5255 latent_std=0.7224 seconds=5.9683
+[29/200] 00014_712/frame_00001.jpg psnr=32.0305 psnr_y=34.3955 ssim=0.9359 ssim_y=0.9447 ms_ssim=0.9875 l1=0.0369 kl=4.9246 latent_std=0.7529 seconds=5.9689
+[30/200] 00014_712/frame_00151.jpg psnr=32.7540 psnr_y=35.2556 ssim=0.9493 ssim_y=0.9568 ms_ssim=0.9896 l1=0.0344 kl=4.9386 latent_std=0.7399 seconds=5.9720
+[31/200] 00015_55/frame_00001.jpg psnr=43.0734 psnr_y=45.6242 ssim=0.9921 ssim_y=0.9967 ms_ssim=0.9978 l1=0.0097 kl=4.6429 latent_std=0.7819 seconds=5.9675
+[32/200] 00015_55/frame_00151.jpg psnr=43.5700 psnr_y=46.4127 ssim=0.9929 ssim_y=0.9970 ms_ssim=0.9982 l1=0.0096 kl=4.5356 latent_std=0.7787 seconds=5.9677
+[33/200] 00016_783/frame_00001.jpg psnr=36.2945 psnr_y=38.2152 ssim=0.9776 ssim_y=0.9843 ms_ssim=0.9959 l1=0.0208 kl=5.1117 latent_std=0.8712 seconds=5.9714
+[34/200] 00016_783/frame_00151.jpg psnr=36.7439 psnr_y=38.7658 ssim=0.9783 ssim_y=0.9862 ms_ssim=0.9961 l1=0.0200 kl=5.1405 latent_std=0.9218 seconds=5.9678
+[35/200] 00017_142/frame_00001.jpg psnr=42.3895 psnr_y=44.2017 ssim=0.9926 ssim_y=0.9964 ms_ssim=0.9981 l1=0.0109 kl=4.8896 latent_std=0.8245 seconds=5.9675
+[36/200] 00017_142/frame_00151.jpg psnr=41.8126 psnr_y=43.8665 ssim=0.9910 ssim_y=0.9961 ms_ssim=0.9980 l1=0.0113 kl=5.2764 latent_std=0.9678 seconds=5.9681
+[37/200] 00018_758/frame_00001.jpg psnr=37.0923 psnr_y=38.8827 ssim=0.9833 ssim_y=0.9873 ms_ssim=0.9969 l1=0.0173 kl=5.4676 latent_std=0.9276 seconds=5.9706
+[38/200] 00018_758/frame_00150.jpg psnr=39.8730 psnr_y=41.6128 ssim=0.9874 ssim_y=0.9945 ms_ssim=0.9972 l1=0.0147 kl=4.7534 latent_std=0.7466 seconds=5.9674
+[39/200] 00018_758/frame_00300.jpg psnr=41.7505 psnr_y=43.7527 ssim=0.9908 ssim_y=0.9951 ms_ssim=0.9978 l1=0.0117 kl=4.6587 latent_std=0.7785 seconds=5.9673
+[40/200] 00019_400/frame_00150.jpg psnr=38.7731 psnr_y=41.4792 ssim=0.9875 ssim_y=0.9929 ms_ssim=0.9972 l1=0.0166 kl=4.6466 latent_std=0.8746 seconds=5.9702
+[41/200] 00019_400/frame_00300.jpg psnr=33.3903 psnr_y=34.9433 ssim=0.9786 ssim_y=0.9832 ms_ssim=0.9957 l1=0.0220 kl=4.8842 latent_std=0.7874 seconds=5.9675
+[42/200] 00020_503/frame_00150.jpg psnr=37.2722 psnr_y=40.8702 ssim=0.9711 ssim_y=0.9945 ms_ssim=0.9948 l1=0.0194 kl=4.6758 latent_std=0.9670 seconds=5.9717
+[43/200] 00021_81/frame_00001.jpg psnr=44.7297 psnr_y=50.8071 ssim=0.9416 ssim_y=0.9991 ms_ssim=0.9915 l1=0.0066 kl=3.6451 latent_std=1.3234 seconds=5.9726
+[44/200] 00021_81/frame_00151.jpg psnr=38.8941 psnr_y=44.6327 ssim=0.9408 ssim_y=0.9986 ms_ssim=0.9916 l1=0.0098 kl=3.7169 latent_std=1.3215 seconds=5.9694
+[45/200] 00022_413/frame_00001.jpg psnr=37.4606 psnr_y=41.0811 ssim=0.9590 ssim_y=0.9863 ms_ssim=0.9929 l1=0.0184 kl=4.4561 latent_std=0.9520 seconds=5.9713
+[46/200] 00022_413/frame_00151.jpg psnr=37.9485 psnr_y=41.3319 ssim=0.9627 ssim_y=0.9885 ms_ssim=0.9941 l1=0.0177 kl=4.4835 latent_std=0.9829 seconds=5.9716
+[47/200] 00023_519/frame_00001.jpg psnr=41.4163 psnr_y=44.1048 ssim=0.9732 ssim_y=0.9959 ms_ssim=0.9957 l1=0.0098 kl=4.0358 latent_std=1.1479 seconds=5.9723
+[48/200] 00023_519/frame_00151.jpg psnr=35.7101 psnr_y=40.0718 ssim=0.9613 ssim_y=0.9945 ms_ssim=0.9922 l1=0.0184 kl=4.2565 latent_std=0.9864 seconds=5.9676
+[49/200] 00024_659/frame_00001.jpg psnr=44.2828 psnr_y=46.7151 ssim=0.9948 ssim_y=0.9980 ms_ssim=0.9978 l1=0.0094 kl=4.5168 latent_std=0.4377 seconds=5.9668
+[50/200] 00024_659/frame_00151.jpg psnr=38.0544 psnr_y=41.7795 ssim=0.9859 ssim_y=0.9919 ms_ssim=0.9946 l1=0.0175 kl=4.8566 latent_std=0.6739 seconds=5.9681
+[51/200] 00025_527/frame_00001.jpg psnr=39.3938 psnr_y=41.2135 ssim=0.9892 ssim_y=0.9920 ms_ssim=0.9977 l1=0.0132 kl=5.8196 latent_std=1.0138 seconds=5.9675
+[52/200] 00025_527/frame_00151.jpg psnr=38.9534 psnr_y=40.7714 ssim=0.9878 ssim_y=0.9911 ms_ssim=0.9974 l1=0.0141 kl=5.6585 latent_std=0.9824 seconds=5.9717
+[53/200] 00026_651/frame_00001.jpg psnr=39.7092 psnr_y=42.9118 ssim=0.9764 ssim_y=0.9954 ms_ssim=0.9966 l1=0.0122 kl=4.1763 latent_std=1.1837 seconds=5.9721
+[54/200] 00026_651/frame_00151.jpg psnr=40.4115 psnr_y=43.0845 ssim=0.9865 ssim_y=0.9961 ms_ssim=0.9973 l1=0.0132 kl=4.2468 latent_std=0.9740 seconds=5.9724
+[55/200] 00026_651/frame_00301.jpg psnr=40.6623 psnr_y=42.9328 ssim=0.9879 ssim_y=0.9963 ms_ssim=0.9975 l1=0.0133 kl=4.2643 latent_std=0.9119 seconds=5.9728
+[56/200] 00027_598/frame_00149.jpg psnr=39.3239 psnr_y=46.5365 ssim=0.9865 ssim_y=0.9992 ms_ssim=0.9977 l1=0.0071 kl=3.3518 latent_std=1.3028 seconds=5.9739
+[57/200] 00027_598/frame_00299.jpg psnr=39.1286 psnr_y=46.3739 ssim=0.9848 ssim_y=0.9991 ms_ssim=0.9974 l1=0.0075 kl=3.3686 latent_std=1.2998 seconds=6.0012
+[58/200] 00028_427/frame_00149.jpg psnr=39.7986 psnr_y=42.2487 ssim=0.9902 ssim_y=0.9937 ms_ssim=0.9975 l1=0.0158 kl=4.6562 latent_std=0.6244 seconds=5.9712
+[59/200] 00028_427/frame_00299.jpg psnr=39.9646 psnr_y=42.4171 ssim=0.9906 ssim_y=0.9940 ms_ssim=0.9975 l1=0.0155 kl=4.6522 latent_std=0.6195 seconds=5.9710
+[60/200] 00029_792/frame_00149.jpg psnr=36.5458 psnr_y=42.8480 ssim=0.9931 ssim_y=0.9971 ms_ssim=0.9969 l1=0.0223 kl=4.5035 latent_std=0.5053 seconds=5.9678
+[61/200] 00029_792/frame_00299.jpg psnr=36.0677 psnr_y=42.1030 ssim=0.9922 ssim_y=0.9967 ms_ssim=0.9965 l1=0.0232 kl=4.4944 latent_std=0.5322 seconds=5.9703
+[62/200] 00030_666/frame_00149.jpg psnr=41.2628 psnr_y=43.9036 ssim=0.9861 ssim_y=0.9951 ms_ssim=0.9980 l1=0.0089 kl=4.3490 latent_std=1.2890 seconds=5.9703
+[63/200] 00030_666/frame_00299.jpg psnr=38.9537 psnr_y=41.4610 ssim=0.9839 ssim_y=0.9924 ms_ssim=0.9973 l1=0.0124 kl=4.5022 latent_std=1.2320 seconds=5.9683
+[64/200] 00031_945/frame_00149.jpg psnr=35.8406 psnr_y=38.7062 ssim=0.9874 ssim_y=0.9923 ms_ssim=0.9966 l1=0.0242 kl=4.7416 latent_std=0.7781 seconds=5.9713
+[65/200] 00031_945/frame_00299.jpg psnr=35.5976 psnr_y=38.2936 ssim=0.9867 ssim_y=0.9913 ms_ssim=0.9966 l1=0.0244 kl=4.7729 latent_std=0.8072 seconds=5.9719
+[66/200] 00032_816/frame_00149.jpg psnr=36.1891 psnr_y=38.3229 ssim=0.9834 ssim_y=0.9909 ms_ssim=0.9971 l1=0.0228 kl=5.1582 latent_std=0.9869 seconds=5.9679
+[67/200] 00032_816/frame_00299.jpg psnr=36.1166 psnr_y=39.0805 ssim=0.9827 ssim_y=0.9919 ms_ssim=0.9967 l1=0.0227 kl=4.9912 latent_std=0.9821 seconds=5.9674
+[68/200] 00033_545/frame_00149.jpg psnr=39.2353 psnr_y=41.5028 ssim=0.9915 ssim_y=0.9951 ms_ssim=0.9985 l1=0.0094 kl=4.1822 latent_std=1.3099 seconds=5.9686
+[69/200] 00033_545/frame_00299.jpg psnr=39.6361 psnr_y=41.7913 ssim=0.9802 ssim_y=0.9942 ms_ssim=0.9966 l1=0.0118 kl=4.3144 latent_std=1.1473 seconds=5.9678
+[70/200] 00034_930/frame_00148.jpg psnr=38.5372 psnr_y=46.4667 ssim=0.9362 ssim_y=0.9979 ms_ssim=0.9908 l1=0.0120 kl=3.8981 latent_std=1.2743 seconds=5.9683
+[71/200] 00034_930/frame_00298.jpg psnr=35.4314 psnr_y=43.5370 ssim=0.9206 ssim_y=0.9971 ms_ssim=0.9884 l1=0.0188 kl=4.1036 latent_std=1.2024 seconds=5.9677
+[72/200] 00035_430/frame_00148.jpg psnr=38.9734 psnr_y=42.1568 ssim=0.9793 ssim_y=0.9930 ms_ssim=0.9964 l1=0.0150 kl=4.4573 latent_std=1.0246 seconds=5.9734
+[73/200] 00035_430/frame_00298.jpg psnr=38.9448 psnr_y=42.1938 ssim=0.9799 ssim_y=0.9928 ms_ssim=0.9964 l1=0.0153 kl=4.4730 latent_std=1.0116 seconds=5.9708
+[74/200] 00036_635/frame_00147.jpg psnr=39.2592 psnr_y=41.9556 ssim=0.9905 ssim_y=0.9945 ms_ssim=0.9975 l1=0.0144 kl=4.7882 latent_std=0.7063 seconds=5.9732
+[75/200] 00036_635/frame_00297.jpg psnr=40.5575 psnr_y=43.7088 ssim=0.9925 ssim_y=0.9960 ms_ssim=0.9979 l1=0.0134 kl=4.6951 latent_std=0.5973 seconds=5.9909
+[76/200] 00037_747/frame_00147.jpg psnr=38.3811 psnr_y=40.1618 ssim=0.9848 ssim_y=0.9892 ms_ssim=0.9970 l1=0.0152 kl=5.0617 latent_std=0.8134 seconds=5.9721
+[77/200] 00037_747/frame_00297.jpg psnr=36.9432 psnr_y=38.6379 ssim=0.9813 ssim_y=0.9859 ms_ssim=0.9967 l1=0.0185 kl=5.2613 latent_std=0.8740 seconds=5.9712
+[78/200] 00038_146/frame_00147.jpg psnr=40.3775 psnr_y=42.1981 ssim=0.9914 ssim_y=0.9949 ms_ssim=0.9979 l1=0.0132 kl=5.2218 latent_std=1.0069 seconds=5.9692
+[79/200] 00038_146/frame_00297.jpg psnr=40.6098 psnr_y=42.4537 ssim=0.9917 ssim_y=0.9948 ms_ssim=0.9980 l1=0.0127 kl=5.3695 latent_std=1.0095 seconds=5.9715
+[80/200] 00039_482/frame_00147.jpg psnr=39.4202 psnr_y=41.5485 ssim=0.9897 ssim_y=0.9932 ms_ssim=0.9976 l1=0.0157 kl=4.7737 latent_std=0.8021 seconds=5.9715
+[81/200] 00039_482/frame_00297.jpg psnr=36.8083 psnr_y=38.7444 ssim=0.9822 ssim_y=0.9868 ms_ssim=0.9967 l1=0.0199 kl=4.8939 latent_std=0.8570 seconds=5.9713
+[82/200] 00040_149/frame_00147.jpg psnr=38.1852 psnr_y=40.5173 ssim=0.9866 ssim_y=0.9958 ms_ssim=0.9961 l1=0.0172 kl=4.4952 latent_std=0.9085 seconds=5.9679
+[83/200] 00040_149/frame_00297.jpg psnr=38.0713 psnr_y=40.8600 ssim=0.9876 ssim_y=0.9963 ms_ssim=0.9961 l1=0.0178 kl=4.5121 latent_std=0.8969 seconds=5.9677
+[84/200] 00041_336/frame_00147.jpg psnr=43.8036 psnr_y=46.7128 ssim=0.9938 ssim_y=0.9969 ms_ssim=0.9981 l1=0.0096 kl=5.2224 latent_std=0.7641 seconds=5.9687
+[85/200] 00041_336/frame_00297.jpg psnr=43.1995 psnr_y=45.6710 ssim=0.9939 ssim_y=0.9971 ms_ssim=0.9980 l1=0.0102 kl=5.0873 latent_std=0.8131 seconds=5.9679
+[86/200] 00042_794/frame_00147.jpg psnr=34.6986 psnr_y=36.3679 ssim=0.9775 ssim_y=0.9822 ms_ssim=0.9958 l1=0.0232 kl=4.9078 latent_std=0.7416 seconds=5.9718
+[87/200] 00042_794/frame_00297.jpg psnr=33.6524 psnr_y=35.2824 ssim=0.9766 ssim_y=0.9823 ms_ssim=0.9961 l1=0.0247 kl=5.0499 latent_std=0.8181 seconds=6.0526
+[88/200] 00043_265/frame_00147.jpg psnr=40.4649 psnr_y=43.2970 ssim=0.9878 ssim_y=0.9940 ms_ssim=0.9970 l1=0.0133 kl=4.7349 latent_std=0.7440 seconds=5.9785
+[89/200] 00043_265/frame_00297.jpg psnr=40.6890 psnr_y=43.5358 ssim=0.9880 ssim_y=0.9940 ms_ssim=0.9972 l1=0.0136 kl=4.7448 latent_std=0.7553 seconds=6.0314
+[90/200] 00044_518/frame_00148.jpg psnr=33.9194 psnr_y=40.2279 ssim=0.9142 ssim_y=0.9984 ms_ssim=0.9878 l1=0.0182 kl=3.7019 latent_std=1.3164 seconds=7.2648
+[91/200] 00044_518/frame_00298.jpg psnr=32.1905 psnr_y=39.0179 ssim=0.9388 ssim_y=0.9975 ms_ssim=0.9911 l1=0.0291 kl=4.2122 latent_std=1.2010 seconds=6.0161
+[92/200] 00045_809/frame_00147.jpg psnr=43.2040 psnr_y=46.4164 ssim=0.9933 ssim_y=0.9968 ms_ssim=0.9982 l1=0.0106 kl=4.6273 latent_std=0.5058 seconds=6.9087
+[93/200] 00045_809/frame_00297.jpg psnr=43.7223 psnr_y=47.3808 ssim=0.9934 ssim_y=0.9968 ms_ssim=0.9981 l1=0.0095 kl=4.6807 latent_std=0.4636 seconds=8.7866
+[94/200] 00046_255/frame_00148.jpg psnr=43.8275 psnr_y=49.3467 ssim=0.9943 ssim_y=0.9975 ms_ssim=0.9984 l1=0.0099 kl=4.4646 latent_std=0.4494 seconds=7.1678
+[95/200] 00046_255/frame_00298.jpg psnr=43.5296 psnr_y=46.3935 ssim=0.9928 ssim_y=0.9969 ms_ssim=0.9980 l1=0.0095 kl=4.3418 latent_std=0.6376 seconds=5.9703
+[96/200] 00047_233/frame_00148.jpg psnr=41.6715 psnr_y=44.7444 ssim=0.9920 ssim_y=0.9954 ms_ssim=0.9980 l1=0.0106 kl=4.7444 latent_std=0.5402 seconds=5.9713
+[97/200] 00047_233/frame_00298.jpg psnr=39.0958 psnr_y=41.3360 ssim=0.9903 ssim_y=0.9938 ms_ssim=0.9977 l1=0.0117 kl=4.7975 latent_std=0.5652 seconds=5.9719
+[98/200] 00048_766/frame_00148.jpg psnr=37.4951 psnr_y=39.1222 ssim=0.9840 ssim_y=0.9873 ms_ssim=0.9969 l1=0.0190 kl=4.8798 latent_std=0.7440 seconds=5.9689
+[99/200] 00048_766/frame_00298.jpg psnr=38.0593 psnr_y=39.6799 ssim=0.9854 ssim_y=0.9886 ms_ssim=0.9973 l1=0.0181 kl=4.7966 latent_std=0.7170 seconds=5.9675
+[100/200] 00049_20/frame_00148.jpg psnr=38.1674 psnr_y=40.4399 ssim=0.9879 ssim_y=0.9931 ms_ssim=0.9973 l1=0.0162 kl=4.9629 latent_std=0.8540 seconds=5.9676
+[101/200] 00049_20/frame_00298.jpg psnr=38.2038 psnr_y=40.4601 ssim=0.9884 ssim_y=0.9934 ms_ssim=0.9974 l1=0.0160 kl=4.9689 latent_std=0.8538 seconds=5.9672
+[102/200] 00050_484/frame_00148.jpg psnr=39.4961 psnr_y=41.6671 ssim=0.9776 ssim_y=0.9923 ms_ssim=0.9958 l1=0.0165 kl=4.4715 latent_std=0.9031 seconds=5.9712
+[103/200] 00050_484/frame_00298.jpg psnr=30.9216 psnr_y=32.4175 ssim=0.9292 ssim_y=0.9595 ms_ssim=0.9872 l1=0.0308 kl=4.6074 latent_std=0.9743 seconds=5.9721
+[104/200] 00051_968/frame_00148.jpg psnr=40.8873 psnr_y=43.1190 ssim=0.9945 ssim_y=0.9977 ms_ssim=0.9984 l1=0.0141 kl=4.4875 latent_std=0.6933 seconds=5.9702
+[105/200] 00051_968/frame_00298.jpg psnr=37.5516 psnr_y=39.9978 ssim=0.9800 ssim_y=0.9929 ms_ssim=0.9956 l1=0.0171 kl=4.7950 latent_std=0.7735 seconds=6.0382
+[106/200] 00052_114/frame_00148.jpg psnr=38.7427 psnr_y=42.3989 ssim=0.9855 ssim_y=0.9933 ms_ssim=0.9952 l1=0.0165 kl=4.7821 latent_std=0.8337 seconds=5.9673
+[107/200] 00052_114/frame_00298.jpg psnr=36.7582 psnr_y=44.5669 ssim=0.9824 ssim_y=0.9935 ms_ssim=0.9944 l1=0.0198 kl=4.8924 latent_std=0.9399 seconds=5.9675
+[108/200] 00053_269/frame_00149.jpg psnr=35.9584 psnr_y=37.6568 ssim=0.9822 ssim_y=0.9856 ms_ssim=0.9965 l1=0.0199 kl=5.0556 latent_std=0.7868 seconds=5.9685
+[109/200] 00053_269/frame_00299.jpg psnr=36.8370 psnr_y=38.5354 ssim=0.9856 ssim_y=0.9884 ms_ssim=0.9971 l1=0.0171 kl=4.8758 latent_std=0.6895 seconds=5.9678
+[110/200] 00054_471/frame_00149.jpg psnr=36.5826 psnr_y=39.9636 ssim=0.9827 ssim_y=0.9964 ms_ssim=0.9968 l1=0.0206 kl=5.0305 latent_std=1.1456 seconds=6.0370
+[111/200] 00054_471/frame_00298.jpg psnr=38.5101 psnr_y=42.5607 ssim=0.9678 ssim_y=0.9958 ms_ssim=0.9957 l1=0.0179 kl=4.4809 latent_std=0.9875 seconds=5.9680
+[112/200] 00055_629/frame_00148.jpg psnr=38.5759 psnr_y=40.3893 ssim=0.9870 ssim_y=0.9908 ms_ssim=0.9973 l1=0.0162 kl=5.0557 latent_std=0.8363 seconds=5.9700
+[113/200] 00055_629/frame_00298.jpg psnr=36.6923 psnr_y=38.5016 ssim=0.9837 ssim_y=0.9873 ms_ssim=0.9971 l1=0.0183 kl=5.6209 latent_std=0.9581 seconds=5.9683
+[114/200] 00056_699/frame_00148.jpg psnr=40.1136 psnr_y=43.2559 ssim=0.9896 ssim_y=0.9967 ms_ssim=0.9973 l1=0.0151 kl=4.5472 latent_std=0.6746 seconds=5.9686
+[115/200] 00056_699/frame_00298.jpg psnr=38.3978 psnr_y=42.6452 ssim=0.9858 ssim_y=0.9959 ms_ssim=0.9967 l1=0.0179 kl=4.5871 latent_std=0.9308 seconds=5.9672
+[116/200] 00057_786/frame_00149.jpg psnr=46.6404 psnr_y=54.0405 ssim=0.9950 ssim_y=0.9998 ms_ssim=0.9993 l1=0.0024 kl=3.1372 latent_std=1.3167 seconds=5.9687
+[117/200] 00057_786/frame_00299.jpg psnr=44.0514 psnr_y=51.3231 ssim=0.9936 ssim_y=0.9997 ms_ssim=0.9990 l1=0.0033 kl=3.1704 latent_std=1.3141 seconds=5.9687
+[118/200] 00058_298/frame_00149.jpg psnr=38.7293 psnr_y=40.6645 ssim=0.9873 ssim_y=0.9933 ms_ssim=0.9974 l1=0.0173 kl=4.6944 latent_std=0.8088 seconds=5.9677
+[119/200] 00058_298/frame_00299.jpg psnr=41.5151 psnr_y=43.5326 ssim=0.9915 ssim_y=0.9963 ms_ssim=0.9979 l1=0.0138 kl=4.5724 latent_std=0.7550 seconds=5.9677
+[120/200] 00059_626/frame_00149.jpg psnr=38.2342 psnr_y=41.0044 ssim=0.9873 ssim_y=0.9940 ms_ssim=0.9958 l1=0.0157 kl=4.8639 latent_std=0.8142 seconds=5.9680
+[121/200] 00059_626/frame_00299.jpg psnr=39.9840 psnr_y=42.2110 ssim=0.9902 ssim_y=0.9952 ms_ssim=0.9960 l1=0.0135 kl=4.7224 latent_std=0.5549 seconds=5.9678
+[122/200] 00060_621/frame_00149.jpg psnr=42.9890 psnr_y=46.4912 ssim=0.9887 ssim_y=0.9959 ms_ssim=0.9976 l1=0.0109 kl=4.4015 latent_std=0.7092 seconds=5.9679
+[123/200] 00060_621/frame_00299.jpg psnr=42.2766 psnr_y=45.8951 ssim=0.9896 ssim_y=0.9959 ms_ssim=0.9977 l1=0.0116 kl=4.4548 latent_std=0.7196 seconds=5.9678
+[124/200] 00061_368/frame_00149.jpg psnr=41.4569 psnr_y=43.1884 ssim=0.9891 ssim_y=0.9937 ms_ssim=0.9970 l1=0.0124 kl=4.8047 latent_std=0.8861 seconds=5.9676
+[125/200] 00061_368/frame_00299.jpg psnr=41.3979 psnr_y=43.1097 ssim=0.9892 ssim_y=0.9937 ms_ssim=0.9971 l1=0.0125 kl=4.9169 latent_std=0.9338 seconds=5.9713
+[126/200] 00062_673/frame_00150.jpg psnr=37.0564 psnr_y=43.2637 ssim=0.9928 ssim_y=0.9970 ms_ssim=0.9965 l1=0.0201 kl=4.5480 latent_std=0.5058 seconds=5.9683
+[127/200] 00062_673/frame_00300.jpg psnr=36.8254 psnr_y=43.0108 ssim=0.9923 ssim_y=0.9968 ms_ssim=0.9963 l1=0.0206 kl=4.5393 latent_std=0.5155 seconds=5.9685
+[128/200] 00063_446/frame_00150.jpg psnr=37.9879 psnr_y=39.8569 ssim=0.9858 ssim_y=0.9905 ms_ssim=0.9969 l1=0.0153 kl=4.8754 latent_std=0.6672 seconds=5.9770
+[129/200] 00063_446/frame_00299.jpg psnr=38.2408 psnr_y=40.1053 ssim=0.9866 ssim_y=0.9908 ms_ssim=0.9969 l1=0.0148 kl=4.8735 latent_std=0.6683 seconds=5.9694
+[130/200] 00064_426/frame_00149.jpg psnr=38.9487 psnr_y=43.7541 ssim=0.9880 ssim_y=0.9954 ms_ssim=0.9970 l1=0.0167 kl=4.5333 latent_std=0.8085 seconds=5.9768
+[131/200] 00064_426/frame_00299.jpg psnr=41.6079 psnr_y=43.2081 ssim=0.9933 ssim_y=0.9967 ms_ssim=0.9979 l1=0.0140 kl=4.5133 latent_std=0.5976 seconds=5.9674
+[132/200] 00065_890/frame_00149.jpg psnr=36.7834 psnr_y=39.5204 ssim=0.9869 ssim_y=0.9940 ms_ssim=0.9976 l1=0.0226 kl=4.5764 latent_std=0.7023 seconds=5.9674
+[133/200] 00065_890/frame_00299.jpg psnr=35.8155 psnr_y=38.1337 ssim=0.9799 ssim_y=0.9894 ms_ssim=0.9969 l1=0.0242 kl=4.6652 latent_std=0.7969 seconds=5.9674
+[134/200] 00066_4/frame_00149.jpg psnr=42.8057 psnr_y=45.7122 ssim=0.9465 ssim_y=0.9956 ms_ssim=0.9962 l1=0.0112 kl=4.5690 latent_std=1.1608 seconds=5.9678
+[135/200] 00066_4/frame_00299.jpg psnr=43.0993 psnr_y=46.3800 ssim=0.9497 ssim_y=0.9960 ms_ssim=0.9959 l1=0.0110 kl=4.5723 latent_std=1.1161 seconds=6.0007
+[136/200] 00067_112/frame_00149.jpg psnr=37.6141 psnr_y=39.4929 ssim=0.9842 ssim_y=0.9886 ms_ssim=0.9967 l1=0.0171 kl=4.9722 latent_std=0.7966 seconds=5.9679
+[137/200] 00067_112/frame_00299.jpg psnr=41.2665 psnr_y=43.5526 ssim=0.9899 ssim_y=0.9938 ms_ssim=0.9978 l1=0.0123 kl=4.8753 latent_std=0.7685 seconds=5.9716
+[138/200] 00068_280/frame_00149.jpg psnr=38.3758 psnr_y=40.8634 ssim=0.9836 ssim_y=0.9914 ms_ssim=0.9963 l1=0.0147 kl=4.6881 latent_std=0.8957 seconds=5.9682
+[139/200] 00068_280/frame_00299.jpg psnr=38.5111 psnr_y=40.7415 ssim=0.9696 ssim_y=0.9798 ms_ssim=0.9939 l1=0.0148 kl=4.6789 latent_std=1.1160 seconds=5.9682
+[140/200] 00069_10/frame_00149.jpg psnr=36.2429 psnr_y=42.8431 ssim=0.9919 ssim_y=0.9978 ms_ssim=0.9972 l1=0.0224 kl=4.2607 latent_std=0.6359 seconds=5.9678
+[141/200] 00069_10/frame_00299.jpg psnr=36.4763 psnr_y=43.0417 ssim=0.9920 ssim_y=0.9979 ms_ssim=0.9974 l1=0.0215 kl=4.2572 latent_std=0.6428 seconds=5.9671
+[142/200] 00070_132/frame_00149.jpg psnr=37.8122 psnr_y=39.7400 ssim=0.9825 ssim_y=0.9866 ms_ssim=0.9964 l1=0.0163 kl=4.7374 latent_std=0.6760 seconds=5.9680
+[143/200] 00070_132/frame_00299.jpg psnr=36.7398 psnr_y=38.5688 ssim=0.9814 ssim_y=0.9878 ms_ssim=0.9962 l1=0.0188 kl=4.9730 latent_std=0.8223 seconds=5.9684
+[144/200] 00071_36/frame_00149.jpg psnr=39.3893 psnr_y=41.2944 ssim=0.9895 ssim_y=0.9929 ms_ssim=0.9975 l1=0.0147 kl=5.2576 latent_std=0.8834 seconds=5.9768
+[145/200] 00071_36/frame_00299.jpg psnr=38.8887 psnr_y=40.8295 ssim=0.9886 ssim_y=0.9921 ms_ssim=0.9974 l1=0.0154 kl=5.1586 latent_std=0.8538 seconds=5.9678
+[146/200] 00072_542/frame_00149.jpg psnr=36.3731 psnr_y=39.3059 ssim=0.9698 ssim_y=0.9891 ms_ssim=0.9936 l1=0.0208 kl=4.5423 latent_std=0.9475 seconds=5.9916
+[147/200] 00072_542/frame_00298.jpg psnr=39.3616 psnr_y=40.8972 ssim=0.9816 ssim_y=0.9931 ms_ssim=0.9966 l1=0.0158 kl=4.4171 latent_std=0.8400 seconds=6.2409
+[148/200] 00073_320/frame_00149.jpg psnr=37.5754 psnr_y=40.1145 ssim=0.9796 ssim_y=0.9972 ms_ssim=0.9962 l1=0.0158 kl=3.7275 latent_std=1.1562 seconds=6.0162
+[149/200] 00073_320/frame_00299.jpg psnr=37.7843 psnr_y=40.3393 ssim=0.9824 ssim_y=0.9976 ms_ssim=0.9965 l1=0.0150 kl=3.6747 latent_std=1.1651 seconds=6.2209
+[150/200] 00074_554/frame_00149.jpg psnr=41.8558 psnr_y=43.5951 ssim=0.9920 ssim_y=0.9955 ms_ssim=0.9983 l1=0.0121 kl=4.6913 latent_std=0.7061 seconds=6.1469
+[151/200] 00074_554/frame_00299.jpg psnr=41.7241 psnr_y=43.5093 ssim=0.9917 ssim_y=0.9951 ms_ssim=0.9982 l1=0.0122 kl=4.7327 latent_std=0.7279 seconds=5.9677
+[152/200] 00075_905/frame_00149.jpg psnr=35.8236 psnr_y=37.5288 ssim=0.9854 ssim_y=0.9884 ms_ssim=0.9968 l1=0.0211 kl=4.8811 latent_std=0.7298 seconds=5.9726
+[153/200] 00075_905/frame_00299.jpg psnr=35.3521 psnr_y=37.0200 ssim=0.9841 ssim_y=0.9871 ms_ssim=0.9966 l1=0.0219 kl=4.9077 latent_std=0.7382 seconds=5.9679
+[154/200] 00076_740/frame_00149.jpg psnr=41.8259 psnr_y=43.1161 ssim=0.9954 ssim_y=0.9976 ms_ssim=0.9986 l1=0.0125 kl=4.6172 latent_std=0.6909 seconds=5.9677
+[155/200] 00076_740/frame_00299.jpg psnr=41.5106 psnr_y=42.8132 ssim=0.9947 ssim_y=0.9968 ms_ssim=0.9985 l1=0.0128 kl=4.6901 latent_std=0.7555 seconds=5.9850
+[156/200] 00077_900/frame_00149.jpg psnr=37.5409 psnr_y=39.6230 ssim=0.9808 ssim_y=0.9867 ms_ssim=0.9961 l1=0.0170 kl=5.0559 latent_std=0.8916 seconds=5.9681
+[157/200] 00077_900/frame_00299.jpg psnr=37.6006 psnr_y=39.7032 ssim=0.9813 ssim_y=0.9870 ms_ssim=0.9962 l1=0.0168 kl=5.0556 latent_std=0.8961 seconds=5.9726
+[158/200] 00078_167/frame_00149.jpg psnr=39.0875 psnr_y=41.0102 ssim=0.9870 ssim_y=0.9903 ms_ssim=0.9973 l1=0.0141 kl=5.5934 latent_std=0.9408 seconds=5.9683
+[159/200] 00078_167/frame_00299.jpg psnr=39.0153 psnr_y=40.9079 ssim=0.9868 ssim_y=0.9899 ms_ssim=0.9973 l1=0.0142 kl=5.6309 latent_std=0.9718 seconds=5.9680
+[160/200] 00079_919/frame_00149.jpg psnr=40.5962 psnr_y=42.8320 ssim=0.9857 ssim_y=0.9910 ms_ssim=0.9966 l1=0.0132 kl=4.7710 latent_std=0.7829 seconds=5.9682
+[161/200] 00079_919/frame_00299.jpg psnr=40.2273 psnr_y=42.3637 ssim=0.9861 ssim_y=0.9912 ms_ssim=0.9967 l1=0.0133 kl=4.8485 latent_std=0.8340 seconds=5.9676
+[162/200] 00080_811/frame_00149.jpg psnr=36.5913 psnr_y=39.0693 ssim=0.9860 ssim_y=0.9911 ms_ssim=0.9965 l1=0.0194 kl=4.7329 latent_std=0.9028 seconds=5.9678
+[163/200] 00080_811/frame_00299.jpg psnr=36.5503 psnr_y=39.0248 ssim=0.9858 ssim_y=0.9910 ms_ssim=0.9965 l1=0.0194 kl=4.7228 latent_std=0.8989 seconds=5.9672
+[164/200] 00081_556/frame_00149.jpg psnr=40.4038 psnr_y=42.5263 ssim=0.9899 ssim_y=0.9939 ms_ssim=0.9974 l1=0.0129 kl=4.9479 latent_std=0.8083 seconds=5.9673
+[165/200] 00081_556/frame_00298.jpg psnr=40.0386 psnr_y=41.9430 ssim=0.9880 ssim_y=0.9929 ms_ssim=0.9970 l1=0.0133 kl=4.9999 latent_std=0.8622 seconds=5.9715
+[166/200] 00082_258/frame_00148.jpg psnr=39.0692 psnr_y=40.7655 ssim=0.9882 ssim_y=0.9917 ms_ssim=0.9978 l1=0.0139 kl=4.7604 latent_std=0.8842 seconds=5.9672
+[167/200] 00082_258/frame_00298.jpg psnr=38.0364 psnr_y=40.0332 ssim=0.9853 ssim_y=0.9889 ms_ssim=0.9974 l1=0.0162 kl=4.9171 latent_std=0.8432 seconds=5.9748
+[168/200] 00083_857/frame_00148.jpg psnr=37.8632 psnr_y=40.3042 ssim=0.9743 ssim_y=0.9936 ms_ssim=0.9959 l1=0.0182 kl=4.7493 latent_std=1.0037 seconds=5.9714
+[169/200] 00083_857/frame_00298.jpg psnr=36.2363 psnr_y=42.6384 ssim=0.9355 ssim_y=0.9956 ms_ssim=0.9908 l1=0.0234 kl=4.6351 latent_std=0.9712 seconds=5.9700
+[170/200] 00084_279/frame_00148.jpg psnr=37.6622 psnr_y=44.2893 ssim=0.9911 ssim_y=0.9973 ms_ssim=0.9970 l1=0.0169 kl=4.1475 latent_std=0.9448 seconds=5.9696
+[171/200] 00084_279/frame_00298.jpg psnr=40.2788 psnr_y=44.0696 ssim=0.9898 ssim_y=0.9964 ms_ssim=0.9974 l1=0.0127 kl=4.2396 latent_std=1.0076 seconds=5.9708
+[172/200] 00085_788/frame_00148.jpg psnr=32.1375 psnr_y=33.9794 ssim=0.9532 ssim_y=0.9717 ms_ssim=0.9934 l1=0.0275 kl=5.0387 latent_std=1.1138 seconds=5.9763
+[173/200] 00085_788/frame_00298.jpg psnr=32.6490 psnr_y=34.5031 ssim=0.9566 ssim_y=0.9747 ms_ssim=0.9940 l1=0.0261 kl=5.0204 latent_std=1.1124 seconds=5.9717
+[174/200] 00086_917/frame_00149.jpg psnr=37.2327 psnr_y=39.1027 ssim=0.9822 ssim_y=0.9877 ms_ssim=0.9967 l1=0.0185 kl=4.8865 latent_std=0.8132 seconds=5.9712
+[175/200] 00086_917/frame_00299.jpg psnr=37.3583 psnr_y=39.2496 ssim=0.9840 ssim_y=0.9883 ms_ssim=0.9965 l1=0.0187 kl=4.9314 latent_std=0.7841 seconds=5.9709
+[176/200] 00087_362/frame_00149.jpg psnr=33.7151 psnr_y=35.7028 ssim=0.9623 ssim_y=0.9736 ms_ssim=0.9929 l1=0.0234 kl=5.1007 latent_std=1.0030 seconds=5.9715
+[177/200] 00087_362/frame_00299.jpg psnr=34.2829 psnr_y=36.2113 ssim=0.9657 ssim_y=0.9759 ms_ssim=0.9937 l1=0.0223 kl=5.0735 latent_std=0.9850 seconds=5.9715
+[178/200] 00088_583/frame_00150.jpg psnr=42.0681 psnr_y=44.7429 ssim=0.9902 ssim_y=0.9949 ms_ssim=0.9975 l1=0.0116 kl=4.7415 latent_std=0.6516 seconds=5.9715
+[179/200] 00088_583/frame_00300.jpg psnr=41.5451 psnr_y=44.0779 ssim=0.9895 ssim_y=0.9947 ms_ssim=0.9974 l1=0.0123 kl=4.7138 latent_std=0.6508 seconds=5.9713
+[180/200] 00089_12/frame_00150.jpg psnr=33.8167 psnr_y=36.3879 ssim=0.9629 ssim_y=0.9857 ms_ssim=0.9939 l1=0.0193 kl=4.6870 latent_std=1.2455 seconds=5.9716
+[181/200] 00089_12/frame_00300.jpg psnr=34.4557 psnr_y=36.9824 ssim=0.9629 ssim_y=0.9875 ms_ssim=0.9945 l1=0.0182 kl=4.6712 latent_std=1.2538 seconds=5.9715
+[182/200] 00090_723/frame_00150.jpg psnr=39.4489 psnr_y=42.7349 ssim=0.9922 ssim_y=0.9962 ms_ssim=0.9974 l1=0.0173 kl=4.3813 latent_std=0.7129 seconds=5.9713
+[183/200] 00090_723/frame_00299.jpg psnr=39.4823 psnr_y=41.6658 ssim=0.9899 ssim_y=0.9941 ms_ssim=0.9970 l1=0.0171 kl=4.5464 latent_std=0.8352 seconds=5.9712
+[184/200] 00091_288/frame_00150.jpg psnr=32.4659 psnr_y=39.3288 ssim=0.9284 ssim_y=0.9754 ms_ssim=0.9802 l1=0.0324 kl=4.8550 latent_std=1.0195 seconds=5.9720
+[185/200] 00091_288/frame_00300.jpg psnr=32.5920 psnr_y=39.3412 ssim=0.9302 ssim_y=0.9764 ms_ssim=0.9811 l1=0.0320 kl=4.8578 latent_std=1.0221 seconds=5.9717
+[186/200] 00092_480/frame_00150.jpg psnr=39.6368 psnr_y=45.1698 ssim=0.9886 ssim_y=0.9970 ms_ssim=0.9973 l1=0.0134 kl=4.0566 latent_std=1.0408 seconds=5.9713
+[187/200] 00092_480/frame_00300.jpg psnr=38.3295 psnr_y=41.4499 ssim=0.9856 ssim_y=0.9940 ms_ssim=0.9971 l1=0.0148 kl=4.3332 latent_std=1.0614 seconds=5.9718
+[188/200] 00093_574/frame_00150.jpg psnr=37.9925 psnr_y=41.5218 ssim=0.9825 ssim_y=0.9934 ms_ssim=0.9955 l1=0.0182 kl=4.5765 latent_std=0.7984 seconds=5.9713
+[189/200] 00093_574/frame_00300.jpg psnr=38.1792 psnr_y=41.5075 ssim=0.9850 ssim_y=0.9940 ms_ssim=0.9962 l1=0.0183 kl=4.6901 latent_std=0.8119 seconds=5.9712
+[190/200] 00094_129/frame_00150.jpg psnr=40.1080 psnr_y=42.0723 ssim=0.9907 ssim_y=0.9941 ms_ssim=0.9978 l1=0.0132 kl=5.2686 latent_std=0.8867 seconds=5.9722
+[191/200] 00094_129/frame_00300.jpg psnr=41.0458 psnr_y=42.9686 ssim=0.9915 ssim_y=0.9947 ms_ssim=0.9979 l1=0.0115 kl=5.3074 latent_std=0.9088 seconds=5.9718
+[192/200] 00095_934/frame_00150.jpg psnr=40.3382 psnr_y=42.4173 ssim=0.9909 ssim_y=0.9947 ms_ssim=0.9979 l1=0.0129 kl=4.9670 latent_std=0.7860 seconds=10.1806
+[193/200] 00095_934/frame_00300.jpg psnr=40.0662 psnr_y=42.1132 ssim=0.9906 ssim_y=0.9944 ms_ssim=0.9979 l1=0.0131 kl=4.9562 latent_std=0.7769 seconds=6.0428
+[194/200] 00096_457/frame_00150.jpg psnr=40.7936 psnr_y=44.7364 ssim=0.9891 ssim_y=0.9931 ms_ssim=0.9971 l1=0.0134 kl=4.5994 latent_std=0.5786 seconds=5.9671
+[195/200] 00096_457/frame_00300.jpg psnr=37.8014 psnr_y=40.3084 ssim=0.9785 ssim_y=0.9873 ms_ssim=0.9945 l1=0.0163 kl=4.7498 latent_std=0.7483 seconds=5.9673
+[196/200] 00097_645/frame_00150.jpg psnr=34.7419 psnr_y=37.1426 ssim=0.9694 ssim_y=0.9777 ms_ssim=0.9938 l1=0.0198 kl=4.5563 latent_std=0.6298 seconds=5.9674
+[197/200] 00098_367/frame_00001.jpg psnr=39.2877 psnr_y=41.3465 ssim=0.9899 ssim_y=0.9934 ms_ssim=0.9975 l1=0.0166 kl=4.7326 latent_std=0.8447 seconds=5.9670
+[198/200] 00098_367/frame_00151.jpg psnr=38.3625 psnr_y=40.0771 ssim=0.9901 ssim_y=0.9930 ms_ssim=0.9978 l1=0.0164 kl=4.7304 latent_std=0.7952 seconds=5.9671
+[199/200] 00099_862/frame_00001.jpg psnr=41.1611 psnr_y=43.6674 ssim=0.9916 ssim_y=0.9947 ms_ssim=0.9983 l1=0.0112 kl=4.6423 latent_std=0.5238 seconds=5.9666
+[200/200] 00099_862/frame_00151.jpg psnr=41.8216 psnr_y=44.9607 ssim=0.9916 ssim_y=0.9952 ms_ssim=0.9981 l1=0.0105 kl=4.6721 latent_std=0.4793 seconds=5.9671
+
+Mean over 200 full frames, peak GPU memory 2.9GB
+  psnr       38.8150 ± 2.7230
+  psnr_y     41.7215 ± 3.0618
+  ssim       0.9818 ± 0.0150
+  ssim_y     0.9920 ± 0.0069
+  ms_ssim    0.9963 ± 0.0025
+  l1         0.0159 ± 0.0051
+  kl         4.7207 ± 0.4372
+  latent_std 0.8670 ± 0.1953
+  seconds    6.1077 ± 1.1801
+Wrote /storage/ice1/4/8/jcochran66/runs/mbconv_vae/inference_best/metrics.csv and /storage/ice1/4/8/jcochran66/runs/mbconv_vae/inference_best/summary.json
+---------------------------------------
+Begin Slurm Epilog: Oct-20-2026 12:49:09
+Job ID:        6422453
+User ID:       jcochran66
+Account:       ece
+Job name:      vae-infer
+Resources:     cpu=8,gres/gpu:h100=1,mem=64G,node=1
+Rsrc Used:     cput=02:59:20,vmem=0,walltime=00:22:25,mem=2440020K,energy_used=0
+Partition:     coe-gpu
+QOS:           coe-ice
+Nodes:         atl1-1-03-010-20-0
+---------------------------------------

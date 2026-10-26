@@ -1,0 +1,32 @@
+---------------------------------------
+Begin Slurm Prolog: Oct-26-2026 14:09:58
+Job ID:    6615656
+User ID:   jcochran66
+Account:   ece
+Job name:  unet-infer
+Partition: coe-gpu
+QOS:       coe-ice
+---------------------------------------
+index, name, compute_mode, memory.used [MiB]
+0, NVIDIA H100 80GB HBM3, Default, 0 MiB
+/home/hice1/jcochran66/scratch/envs/nue/lib/python3.11/site-packages/torch/cuda/__init__.py:129: UserWarning: CUDA initialization: CUDA unknown error - this may be due to an incorrectly set up environment, e.g. changing env variable CUDA_VISIBLE_DEVICES after program start. Setting the available devices to be zero. (Triggered internally at /pytorch/c10/cuda/CUDAFunctions.cpp:109.)
+  return torch._C._cuda_getDeviceCount() > 0
+usage: unet_inference.py [-h] --input INPUT [--checkpoint CHECKPOINT]
+                         [--vae VAE] [--out-dir OUT_DIR] [--limit LIMIT]
+                         [--save-images SAVE_IMAGES] [--crop CROP]
+                         [--steps STEPS] [--seed SEED] [--lpips] [--tile TILE]
+                         [--overlap OVERLAP] [--tile-batch TILE_BATCH] [--amp]
+                         [--device DEVICE]
+unet_inference.py: error: --amp is supported only with CUDA
+---------------------------------------
+Begin Slurm Epilog: Oct-26-2026 14:11:30
+Job ID:        6615656
+User ID:       jcochran66
+Account:       ece
+Job name:      unet-infer
+Resources:     cpu=8,gres/gpu:h100=1,mem=64G,node=1
+Rsrc Used:     cput=00:12:16,vmem=0,walltime=00:01:32,mem=543144K,energy_used=0
+Partition:     coe-gpu
+QOS:           coe-ice
+Nodes:         atl1-1-03-011-3-0
+---------------------------------------

@@ -1,0 +1,95 @@
+---------------------------------------
+Begin Slurm Prolog: Oct-22-2026 21:20:55
+Job ID:    6482975
+User ID:   jcochran66
+Account:   ece
+Job name:  unet
+Partition: coe-gpu
+QOS:       coe-ice
+---------------------------------------
+index, name, compute_mode, memory.used [MiB]
+0, NVIDIA H100 80GB HBM3, Default, 0 MiB
+1, NVIDIA H100 80GB HBM3, Default, 0 MiB
+2, NVIDIA H100 80GB HBM3, Default, 0 MiB
+3, NVIDIA H100 80GB HBM3, Default, 0 MiB
+W1022 21:22:29.889000 708303 /storage/ice1/4/8/jcochran66/envs/nue/lib/python3.11/site-packages/torch/distributed/run.py:792] 
+W1022 21:22:29.889000 708303 /storage/ice1/4/8/jcochran66/envs/nue/lib/python3.11/site-packages/torch/distributed/run.py:792] *****************************************
+W1022 21:22:29.889000 708303 /storage/ice1/4/8/jcochran66/envs/nue/lib/python3.11/site-packages/torch/distributed/run.py:792] Setting OMP_NUM_THREADS environment variable for each process to be 1 in default, to avoid your system being overloaded, please further tune the variable for optimal performance in your application as needed. 
+W1022 21:22:29.889000 708303 /storage/ice1/4/8/jcochran66/envs/nue/lib/python3.11/site-packages/torch/distributed/run.py:792] *****************************************
+Resumed after 28 finished epochs, 188928 images into epoch 29, step=121000
+train images=269877 val images=2000 gpus=4 unet params=77.6M
+latent mean=[ 0.013 -0.007 -0.006  0.035  0.558 -0.123  0.07  -0.106 -0.024  0.116
+  0.009 -0.02   0.018 -0.049 -0.084  0.008]
+latent std=[0.765 0.853 0.797 0.767 3.393 0.718 1.017 0.748 0.742 0.69  1.224 0.855
+ 0.797 0.773 0.662 0.814]
+epoch 29 252928/269877 images step=122000 loss=0.30831 (rank 0) lr=1.00e-04 0.301s/step
+epoch 29/40 train loss=0.31027 val loss (EMA)=0.41142 | 16 DDIM-50 samples PSNR=32.32dB (bicubic 31.74dB)
+epoch 30 47104/269877 images step=123000 loss=0.30867 (rank 0) lr=1.00e-04 0.271s/step
+epoch 30 111104/269877 images step=124000 loss=0.31289 (rank 0) lr=1.00e-04 0.268s/step
+epoch 30 175104/269877 images step=125000 loss=0.31209 (rank 0) lr=1.00e-04 0.277s/step
+epoch 30 239104/269877 images step=126000 loss=0.31281 (rank 0) lr=1.00e-04 0.269s/step
+epoch 30/40 train loss=0.31130 val loss (EMA)=0.41100 | 16 DDIM-50 samples PSNR=32.44dB (bicubic 31.74dB)
+epoch 31 33280/269877 images step=127000 loss=0.30968 (rank 0) lr=1.00e-04 0.272s/step
+epoch 31 97280/269877 images step=128000 loss=0.30624 (rank 0) lr=1.00e-04 0.268s/step
+epoch 31 161280/269877 images step=129000 loss=0.30926 (rank 0) lr=1.00e-04 0.274s/step
+epoch 31 225280/269877 images step=130000 loss=0.31282 (rank 0) lr=1.00e-04 0.270s/step
+epoch 31/40 train loss=0.31067 val loss (EMA)=0.41064 | 16 DDIM-50 samples PSNR=32.39dB (bicubic 31.74dB)
+epoch 32 19456/269877 images step=131000 loss=0.31227 (rank 0) lr=1.00e-04 0.276s/step
+epoch 32 83456/269877 images step=132000 loss=0.31161 (rank 0) lr=1.00e-04 0.269s/step
+epoch 32 147456/269877 images step=133000 loss=0.31054 (rank 0) lr=1.00e-04 0.267s/step
+epoch 32 211456/269877 images step=134000 loss=0.31170 (rank 0) lr=1.00e-04 0.276s/step
+epoch 32/40 train loss=0.30988 val loss (EMA)=0.41031 | 16 DDIM-50 samples PSNR=32.44dB (bicubic 31.74dB)
+epoch 33 5632/269877 images step=135000 loss=0.31336 (rank 0) lr=1.00e-04 0.304s/step
+epoch 33 69632/269877 images step=136000 loss=0.31289 (rank 0) lr=1.00e-04 0.267s/step
+epoch 33 133632/269877 images step=137000 loss=0.30947 (rank 0) lr=1.00e-04 0.267s/step
+epoch 33 197632/269877 images step=138000 loss=0.31011 (rank 0) lr=1.00e-04 0.279s/step
+epoch 33 261632/269877 images step=139000 loss=0.31070 (rank 0) lr=1.00e-04 0.267s/step
+epoch 33/40 train loss=0.30945 val loss (EMA)=0.40996 | 16 DDIM-50 samples PSNR=32.47dB (bicubic 31.74dB)
+epoch 34 55808/269877 images step=140000 loss=0.31079 (rank 0) lr=1.00e-04 0.270s/step
+epoch 34 119808/269877 images step=141000 loss=0.30847 (rank 0) lr=1.00e-04 0.268s/step
+epoch 34 183808/269877 images step=142000 loss=0.31039 (rank 0) lr=1.00e-04 0.276s/step
+epoch 34 247808/269877 images step=143000 loss=0.31059 (rank 0) lr=1.00e-04 0.268s/step
+epoch 34/40 train loss=0.30931 val loss (EMA)=0.40965 | 16 DDIM-50 samples PSNR=32.49dB (bicubic 31.74dB)
+epoch 35 41984/269877 images step=144000 loss=0.31146 (rank 0) lr=1.00e-04 0.271s/step
+epoch 35 105984/269877 images step=145000 loss=0.30924 (rank 0) lr=1.00e-04 0.269s/step
+epoch 35 169984/269877 images step=146000 loss=0.31225 (rank 0) lr=1.00e-04 0.275s/step
+epoch 35 233984/269877 images step=147000 loss=0.30963 (rank 0) lr=1.00e-04 0.268s/step
+epoch 35/40 train loss=0.30957 val loss (EMA)=0.40929 | 16 DDIM-50 samples PSNR=32.51dB (bicubic 31.74dB)
+epoch 36 28160/269877 images step=148000 loss=0.30868 (rank 0) lr=9.99e-05 0.274s/step
+epoch 36 92160/269877 images step=149000 loss=0.30634 (rank 0) lr=9.89e-05 0.267s/step
+epoch 36 156160/269877 images step=150000 loss=0.31204 (rank 0) lr=9.68e-05 0.271s/step
+epoch 36 220160/269877 images step=151000 loss=0.30397 (rank 0) lr=9.36e-05 0.276s/step
+epoch 36/40 train loss=0.30861 val loss (EMA)=0.40905 | 16 DDIM-50 samples PSNR=32.54dB (bicubic 31.74dB)
+epoch 37 14336/269877 images step=152000 loss=0.30296 (rank 0) lr=8.96e-05 0.280s/step
+epoch 37 78336/269877 images step=153000 loss=0.31061 (rank 0) lr=8.46e-05 0.268s/step
+epoch 37 142336/269877 images step=154000 loss=0.30789 (rank 0) lr=7.89e-05 0.270s/step
+epoch 37 206336/269877 images step=155000 loss=0.30670 (rank 0) lr=7.26e-05 0.274s/step
+epoch 37/40 train loss=0.30737 val loss (EMA)=0.40874 | 16 DDIM-50 samples PSNR=32.54dB (bicubic 31.74dB)
+epoch 38 512/269877 images step=156000 loss=0.32447 (rank 0) lr=6.57e-05 0.665s/step
+epoch 38 64512/269877 images step=157000 loss=0.30413 (rank 0) lr=5.86e-05 0.268s/step
+epoch 38 128512/269877 images step=158000 loss=0.30542 (rank 0) lr=5.12e-05 0.267s/step
+epoch 38 192512/269877 images step=159000 loss=0.30940 (rank 0) lr=4.39e-05 0.273s/step
+epoch 38 256512/269877 images step=160000 loss=0.30200 (rank 0) lr=3.67e-05 0.269s/step
+epoch 38/40 train loss=0.30592 val loss (EMA)=0.40828 | 16 DDIM-50 samples PSNR=32.53dB (bicubic 31.74dB)
+epoch 39 50688/269877 images step=161000 loss=0.30688 (rank 0) lr=2.98e-05 0.272s/step
+epoch 39 114688/269877 images step=162000 loss=0.30473 (rank 0) lr=2.33e-05 0.267s/step
+epoch 39 178688/269877 images step=163000 loss=0.30075 (rank 0) lr=1.75e-05 0.268s/step
+epoch 39 242688/269877 images step=164000 loss=0.30250 (rank 0) lr=1.24e-05 0.275s/step
+epoch 39/40 train loss=0.30434 val loss (EMA)=0.40784 | 16 DDIM-50 samples PSNR=32.54dB (bicubic 31.74dB)
+epoch 40 36864/269877 images step=165000 loss=0.29752 (rank 0) lr=8.11e-06 0.273s/step
+epoch 40 100864/269877 images step=166000 loss=0.30506 (rank 0) lr=4.79e-06 0.267s/step
+epoch 40 164864/269877 images step=167000 loss=0.30311 (rank 0) lr=2.47e-06 0.269s/step
+epoch 40 228864/269877 images step=168000 loss=0.30504 (rank 0) lr=1.23e-06 0.274s/step
+epoch 40/40 train loss=0.30399 val loss (EMA)=0.40752 | 16 DDIM-50 samples PSNR=32.55dB (bicubic 31.74dB)
+---------------------------------------
+Begin Slurm Epilog: Oct-23-2026 01:01:43
+Job ID:        6482975
+User ID:       jcochran66
+Account:       ece
+Job name:      unet
+Resources:     cpu=32,gres/gpu:h100=4,mem=128G,node=1
+Rsrc Used:     cput=4-21:46:08,vmem=0,walltime=03:40:49,mem=134175264K,energy_used=0
+Partition:     coe-gpu
+QOS:           coe-ice
+Nodes:         atl1-1-03-010-15-0
+---------------------------------------
