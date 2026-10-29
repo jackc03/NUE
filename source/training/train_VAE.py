@@ -150,7 +150,7 @@ class ImageNetDataset(Dataset):
                 )
             ])
         else:
-            self.transform = T.Compose([
+            self.eval_transform = T.Compose([
                 T.Resize(crop + 32, interpolation=InterpolationMode.BILINEAR),
                 T.CenterCrop(crop),
                 T.ToTensor(),
@@ -159,6 +159,12 @@ class ImageNetDataset(Dataset):
                     std=(0.5, 0.5, 0.5)
                 ),
             ])
+
+        self.downsample = T.Resize(
+            (crop // 2, crop // 2),
+            interpolation=InterpolationMode.BICUBIC,
+            antialias=True
+        )
 
     def __len__(self):
         return len(self.paths)
@@ -169,43 +175,61 @@ class ImageNetDataset(Dataset):
         with Image.open(path) as source:
             image = ImageOps.exif_transpose(source).convert("RGB")
 
-        if not self.training:
-            return self.transform(image)
+        if self.training:
+            epoch = self.shared_epoch.value
+            seed_bytes = hashlib.blake2b(
+                f"{self.seed}:{epoch}:{self.rank}:{index}".encode(),
+                digest_size=8
+            ).digest()
 
-        epoch = self.shared_epoch.value
-        seed_bytes = hashlib.blake2b(
-            f"{self.seed}:{epoch}:{self.rank}:{index}".encode(),
-            digest_size=8
-        ).digest()
+            sample_seed = int.from_bytes(seed_bytes, "little")
+            rng = random.Random(sample_seed)
 
-        sample_seed = int.from_bytes(seed_bytes, "little")
-        rng = random.Random(sample_seed)
+            image = TF.resize(
+                image,
+                self.crop + 32,
+                interpolation=InterpolationMode.BILINEAR,
+            )
 
-        image = TF.resize(
-            image,
-            self.crop + 32,
-            interpolation=InterpolationMode.BILINEAR,
-        )
+            width, height = image.size
 
-        width, height = image.size
-        top = rng.randint(0, height - self.crop)
-        left = rng.randint(0, width - self.crop)
-        image = TF.crop(
-            image,
-            top,
-            left,
-            self.crop,
-            self.crop,
-        )
+            top = rng.randint(0, height - self.crop)
+            left = rng.randint(0, width - self.crop)
 
-        if rng.random() < 0.5:
-            image = TF.hflip(image)
-        tensor = TF.to_tensor(image)
-        return TF.normalize(
-            tensor,
+            image = TF.crop(
+                image,
+                top,
+                left,
+                self.crop,
+                self.crop,
+            )
+
+            if rng.random() < 0.5:
+                image = TF.hflip(image)
+
+        else:
+            image = self.eval_transform(image)
+
+        # Original HR target
+        hr = TF.to_tensor(image)
+
+        # Lossy LR input
+        lr = TF.to_tensor(self.downsample(image))
+
+        # Normalize both to [-1, 1]
+        hr = TF.normalize(
+            hr,
             mean=[0.5, 0.5, 0.5],
             std=[0.5, 0.5, 0.5]
         )
+
+        lr = TF.normalize(
+            lr,
+            mean=[0.5, 0.5, 0.5],
+            std=[0.5, 0.5, 0.5]
+        )
+
+        return lr, hr
 
     def set_epoch(self, epoch):
         self.shared_epoch.value = epoch
@@ -388,20 +412,21 @@ def validate_vae(
         leave=False
     )
     with torch.inference_mode():
-        for batch_idx, x, in enumerate(valid_bar):
-            x = x.to(device, non_blocking=True)
+        for batch_idx, (lr, hr), in enumerate(valid_bar):
+            lr = lr.to(device, non_blocking=True)
+            hr = hr.to(device, non_blocking=True)
 
             with torch.autocast(device_type=device.type, dtype=torch.bfloat16, enabled=args.amp):
-                reconstruction, mu, logvar = model(x, sample=False)
-                loss, metrics = vae_loss(reconstruction, x, mu, logvar, args.beta)
+                reconstruction, mu, logvar = model(lr, sample=False)
+                loss, metrics = vae_loss(reconstruction, hr, mu, logvar, args.beta)
 
-            batch_size = x.size(0)
+            batch_size = hr.size(0)
             for i, key in enumerate(("loss", "l1", "kl")):
                 val_stats[i] += metrics[key].detach().double() * batch_size
             val_stats[3] += batch_size
 
             pred = reconstruction.detach().float().clamp(-1, 1)
-            target = x.float().clamp(-1, 1)
+            target = hr.float().clamp(-1, 1)
 
             squared_error = ((pred - target) / 2.0).square()
 
@@ -413,8 +438,8 @@ def validate_vae(
             ssim_metric.update(pred_01, target_01)
             lpips_metroc.update(pred, target)
 
-            if is_main and batch_idx == 0:
-                save_preview(x, reconstruction, out / "preview.png")
+            if is_main and batch_idx in set(random.randint(batch_size) for _ in range(5)):
+                save_preview(hr, reconstruction, out / f"preview_{batch_idx}.png")
             if is_main and batch_idx % 10 == 0:
                 valid_bar.set_postfix(
                     loss=f"{metrics['loss'].item():.4f}",
@@ -593,7 +618,8 @@ def main():
     config = dict(
         base_channels=args.base_channels,
         blocks_per_stage=args.blocks_per_stage,
-        latent_channels=args.latent_channels
+        latent_channels=args.latent_channels,
+        max_channels=args.max_channels
     )
     
     
@@ -727,16 +753,17 @@ def main():
                 leave=False,
             )
 
-            for batch_idx, x in enumerate(train_bar, start=skip_batches):
-                x = x.to(device, non_blocking=True)
+            for batch_idx, (lr, hr) in enumerate(train_bar, start=skip_batches):
+                lr = lr.to(device, non_blocking=True)
+                hr = hr.to(device, non_blocking=True)
                 
                 beta = args.beta * min(1., (step + 1) / max(args.kl_warmup_steps, 1))
                 
                 optimizer.zero_grad(set_to_none=True)
                 
                 with torch.autocast(device_type=device.type, dtype=torch.bfloat16, enabled=args.amp):
-                    reconstruction, mu, logvar = model(x)
-                    loss, metrics = vae_loss(reconstruction, x, mu, logvar, beta)
+                    reconstruction, mu, logvar = model(lr)
+                    loss, metrics = vae_loss(reconstruction, hr, mu, logvar, beta)
                     
                 if not torch.isfinite(loss):
                     raise FloatingPointError(
@@ -758,9 +785,9 @@ def main():
                 }
 
                 for key, value in batch_metrics.items():
-                    train_sum[key] += value * x.size(0)
+                    train_sum[key] += value * lr.size(0)
 
-                seen += x.size(0)
+                seen += lr.size(0)
                 step += 1
 
                 if is_main and step % 10 == 0:

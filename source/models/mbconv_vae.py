@@ -84,6 +84,10 @@ class MBConvVAE(nn.Module):
             for prev, curr in reversed(transtions):
                 decoder.append(MBConv(curr, prev))
                 c_in = prev
+
+        decoder.append(nn.ConvTranspose2d(c_in, c_in, kernel_size=4, stride=2, padding=1, bias=False))
+        for _ in range(blocks_per_stage):
+            decoder.append(MBConv(c_in, c_in))
         decoder += [norm(c_in), nn.SiLU(), nn.Conv2d(c_in, 3, kernel_size=3, stride=1, padding=1, bias=False), nn.Tanh()]
         self.decoder = nn.Sequential(*decoder)
 
@@ -116,7 +120,8 @@ class MBConvVAE(nn.Module):
         mu, logvar = self.encode(x)
         sample = self.training if sample is None else sample
         z = self.reparameterize(mu, logvar) if sample else mu
-        return self.decode(z, x.shape[-2:]), mu, logvar
+        h, w = x.shape[-2:]
+        return self.decode(z, (h*2, w*2)), mu, logvar
 
 
 

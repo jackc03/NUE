@@ -16,7 +16,7 @@ SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 TRAIN_ARGS=(
     --train-dir "/home/hice1/yyu496/scratch/NUE/inter4k_frames_fps_60/train"
     --val-dir "/home/hice1/yyu496/scratch/NUE/inter4k_frames_fps_60/val"
-    --out-dir "/home/hice1/yyu496/scratch/NUE/runs4_inter4k_small_bs_32_2_512"
+    --out-dir "/home/hice1/yyu496/scratch/NUE/runs5_inter4k_encoder_3_decoder_4_test1"
 
     --workers 8
     --compile
@@ -24,7 +24,7 @@ TRAIN_ARGS=(
     --lr 1e-3
     --save_every_steps 200
 
-    # --imagenet
+    --imagenet
 
     --max_channels 512
     --latent-channels 16
@@ -37,7 +37,7 @@ TRAIN_ARGS=(
     --train
 
     # --resume "/home/hice1/yyu496/scratch/NUE/runs1/step_level_latest.pt"
-    --resume "/home/hice1/yyu496/scratch/NUE/runs4_inter4k_small_bs_32_2_512/step_level_latest.pt"
+    # --resume "/home/hice1/yyu496/scratch/NUE/runs4_inter4k_small_bs_32_2_512/step_level_latest.pt"
 )
 
 torchrun --standalone --nproc-per-node=3 \
