@@ -3,14 +3,18 @@
 Example: python train_VAE.py --train-dir data/train --val-dir data/val --out-dir runs/mbconv
 """
 
+<<<<<<< HEAD
 import sys
 sys.path.insert(0, "/home/hice1/yyu496/AI_Enigneer")
 
 
 import os
+=======
+>>>>>>> 76e42f1dcb10ee97073c57135a90278837c60e38
 import argparse
 import math
 import random
+import sys
 from pathlib import Path
 import json
 from itertools import chain, islice
@@ -26,6 +30,7 @@ from torchvision.transforms import InterpolationMode
 from torchvision.transforms import functional as TF
 
 import torch
+<<<<<<< HEAD
 import torch.distributed as dist
 from torch.nn.parallel import DistributedDataParallel as DDP
 from torch.utils.data import DataLoader, Dataset, BatchSampler, Sampler
@@ -36,6 +41,12 @@ from torchmetrics.image.lpip import LearnedPerceptualImagePatchSimilarity
 
 
 from NUE.source.models.mbconv_vae import MBConvVAE, vae_loss
+=======
+from torch.utils.data import DataLoader, Dataset
+
+sys.path.insert(0, str(Path(__file__).resolve().parents[2]))  # Repo root, wherever it is cloned
+from source.models.mbconv_vae import MBConvVAE, vae_loss
+>>>>>>> 76e42f1dcb10ee97073c57135a90278837c60e38
 
 EXTENSIONS = {'.png', '.jpg', '.jpeg', '.webp', '.bmp'}
 
